@@ -3,64 +3,93 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CV de Noan Heinry - Étudiant en Informatique</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Noan Heinry - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Noan Heinry</h1>
-        <p>Étudiant en 2e année de BUT Informatique - Laval</p>
-        <p>Contact : heinry.noan16@gmail.com | Téléphone : 06 33 99 70 58</p>
-    </header>
+    <div class="container">
+        <header>
+            <div class="avatar">
+                <img src="avatar.jpg" alt="Photo de profil" />
+            </div>
+            <div class="profile-info">
+                <h1>Noan Heinry</h1>
+                <p class="tagline">Étudiant en BUT Informatique | Développeur en herbe</p>
+                <p class="status">En recherche de stage à partir d’avril 2026</p>
+            </div>
+        </header>
 
-    <section>
-        <h2>Profil</h2>
-        <p>Étudiant passionné par le développement informatique, avec des compétences en programmation Python, Java, C, et des expériences en développement web, gestion de projet et modélisation de bases de données.</p>
-    </section>
+        <section class="summary">
+            <h2>À propos de moi</h2>
+            <p>
+                Étudiant passionné par le développement logiciel, les bases de données et les systèmes. 
+                Je travaille sur des projets personnels en Python, Java, C et web (HTML/CSS/JS/PHP). 
+                Toujours curieux, j’aime apprendre de nouvelles technologies et résoudre des problèmes complexes.
+            </p>
+        </section>
 
-    <section>
-        <h2>Compétences techniques</h2>
-        <ul>
-            <li>Langages : Python, Java, C, JavaScript, PHP</li>
-            <li>Web : HTML, CSS, JavaScript, PHP</li>
-            <li>Bases de données : SQL, MySQL, Modélisation MCD/MLD</li>
-            <li>Outils : Linux, Windows, macOS, Git, GitHub, Figma, SceneBuilder</li>
-            <li>Gestion de projet, analyse des besoins, rédaction de cahiers des charges</li>
-        </ul>
-    </section>
+        <section class="projects">
+            <h2>Mes Projets</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="morpion.jpg" alt="Projet Morpion IA" />
+                    <h3>Jeu du Morpion avec IA</h3>
+                    <p>Un jeu en Java avec un mode contre un robot utilisant une logique simple d’IA.</p>
+                    <a href="https://github.com/tonpseudo/morpion-java" target="_blank">Voir le code</a>
+                </div>
 
-    <section>
-        <h2>Projets</h2>
-        <ul>
-            <li>Jeu du Morpion en Java avec intelligence artificielle</li>
-            <li>Algorithme de navigation autonome pour robot EV3</li>
-            <li>Jeu de la vie en Python avec Pygame</li>
-            <li>Création de sites web statiques et dynamiques avec bases de données</li>
-        </ul>
-    </section>
+                <div class="project-card">
+                    <img src="robot-ev3.jpg" alt="Robot EV3 autonome" />
+                    <h3>Navigation autonome EV3</h3>
+                    <p>Implémentation d’un algorithme de déplacement intelligent pour robot Lego.</p>
+                    <a href="https://github.com/tonpseudo/ev3-nav" target="_blank">Voir le code</a>
+                </div>
 
-    <section>
-        <h2>Formation</h2>
-        <p>BUT Informatique 2e année, Laval</p>
-        <p>Baccalauréat général mention bien Math/Physique, 2024</p>
-    </section>
+                <div class="project-card">
+                    <img src="jeu-de-la-vie.jpg" alt="Jeu de la vie en Python" />
+                    <h3>Jeu de la vie (Conway)</h3>
+                    <p>Simulation en Python avec Pygame, basée sur des règles de cellules vivantes.</p>
+                    <a href="https://github.com/tonpseudo/conway-pygame" target="_blank">Voir le code</a>
+                </div>
 
-    <section>
-        <h2>Langues</h2>
-        <ul>
-            <li>Français : langue maternelle</li>
-            <li>Anglais : niveau courant</li>
-            <li>Espagnol : notions de base</li>
-        </ul>
-    </section>
+                <div class="project-card">
+                    <img src="site-web.jpg" alt="Site web académique" />
+                    <h3>Site web avec base de données</h3>
+                    <p>Projet académique en PHP/MySQL avec gestion des utilisateurs et formulaires.</p>
+                    <a href="https://github.com/tonpseudo/site-php" target="_blank">Voir le code</a>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h2>Loisirs</h2>
-        <p>Gymnastique de haut niveau (9 ans), passion pour la musique, gaming, et technologie</p>
-    </section>
+        <section class="skills">
+            <h2>Compétences techniques</h2>
+            <ul>
+                <li><strong>Langages :</strong> Python, Java, C, JavaScript, PHP</li>
+                <li><strong>Web :</strong> HTML, CSS, JavaScript, PHP, Node.js</li>
+                <li><strong>Bases de données :</strong> SQL, MySQL, MCD/MLD</li>
+                <li><strong>Outils :</strong> Git, GitHub, Figma, Linux, SceneBuilder</li>
+                <li><strong>Autres :</strong> Gestion de projet, analyse des besoins, maquettage</li>
+            </ul>
+        </section>
 
-    <footer>
-        <p>© 2025 Noan Heinry - Tous droits réservés</p>
-    </footer>
+        <section class="interests">
+            <h2>Centres d’intérêt</h2>
+            <ul>
+                <li>🎮 Gaming (PC, stratégie, jeux de réflexion)</li>
+                <li>🎵 Découverte musicale (indie, rock, électronique)</li>
+                <li>💻 Optimisation de matériel et systèmes</li>
+                <li>🛕 Gymnastique de haut niveau (9 ans de pratique)</li>
+                <li>🚗 Recherche sur les voitures et technologies embarquées</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>© 2025 Noan Heinry - Portfolio personnel</p>
+            <div class="social-links">
+                <a href="https://github.com/tonpseudo" target="_blank">GitHub</a> |
+                <a href="mailto:heinry.noan16@gmail.com">Email</a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
