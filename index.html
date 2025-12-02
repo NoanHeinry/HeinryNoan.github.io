@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NoanOS - Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/HeinryNoan.github.io/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -96,10 +96,10 @@
             <div class="window-content">
                 <h3>Stack Technique</h3>
                 <ul class="terminal-list">
-                    <li>> Langages: Python, Java, C, PHP</li>
-                    <li>> Web: HTML5, CSS3, JS, Node.js</li>
-                    <li>> DB: MySQL, SQL</li>
-                    <li>> Tools: Git, Linux, Figma</li>
+                    <li>> Langages: Python, Java, C, PHP, JavaFX</li>
+                    <li>> Web: HTML, CSS, JS, Node.js</li>
+                    <li>> DB: MySQL, SQL, NoSql; mongoDB</li>
+                    <li>> Outils: Git, Linux, Figma</li>
                 </ul>
             </div>
         </div>
@@ -126,28 +126,23 @@
         <div class="taskbar-divider"></div>
         <button class="task-btn" onclick="openWindow('about')">👤 Info</button>
         <button class="task-btn" onclick="openWindow('projects')">🚀 Projets</button>
-        <button class="task-btn" onclick="openWindow('skills')">💻 Skills</button>
+        <button class="task-btn" onclick="openWindow('skills')">💻 Compétences</button>
         <div class="clock" id="clock">12:00</div>
     </div>
 
     <script>
-        // Fonction pour ouvrir une fenêtre
         function openWindow(id) {
-            // On ferme toutes les fenêtres d'abord (optionnel, pour faire plus propre)
             const windows = document.querySelectorAll('.window');
             windows.forEach(w => w.style.display = 'none');
             
-            // On ouvre la fenêtre demandée
             const win = document.getElementById(id);
             win.style.display = 'flex';
         }
 
-        // Fonction pour fermer
         function closeWindow(id) {
             document.getElementById(id).style.display = 'none';
         }
 
-        // Petite horloge pour la barre des tâches
         function updateClock() {
             const now = new Date();
             const timeString = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
