@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    overflow: hidden; /* Empêche le scroll global, on veut un effet bureau fixe */
+    overflow: hidden;
     background-color: #000;
     color: #fff;
 }
@@ -12,7 +12,6 @@ body {
 .desktop {
     width: 100vw;
     height: 100vh;
-    /* Dégradé Cyberpunk : Noir -> Violet -> Rose sombre */
     background: linear-gradient(135deg, #050505 0%, #1a0b2e 50%, #2d1b4e 100%);
     position: relative;
     display: flex;
@@ -59,15 +58,15 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centrage */
+    transform: translate(-50%, -50%);
     width: 600px;
     max-width: 90%;
     max-height: 70vh;
-    background: rgba(16, 16, 24, 0.95); /* Fond sombre semi-transparent */
-    border: 2px solid #bd93f9; /* Bordure Violette */
+    background: rgba(16, 16, 24, 0.95);
+    border: 2px solid #bd93f9;
     box-shadow: 0 0 20px rgba(189, 147, 249, 0.4);
     border-radius: 8px;
-    display: none; /* Caché par défaut */
+    display: none;
     flex-direction: column;
     z-index: 10;
 }
@@ -104,12 +103,12 @@ body {
 /* CONTENU DES FENÊTRES */
 .window-content {
     padding: 20px;
-    overflow-y: auto; /* Scroll à l'intérieur de la fenêtre */
+    overflow-y: auto;
     font-family: 'Segoe UI', sans-serif;
 }
 
 .window-content h2, .window-content h3 {
-    color: #bd93f9; /* Titres en violet */
+    color: #bd93f9;
     border-bottom: 1px solid #444;
     padding-bottom: 5px;
 }
@@ -153,7 +152,7 @@ body {
     list-style: none;
     padding: 0;
     font-family: 'Courier New', monospace;
-    color: #50fa7b; /* Vert Matrix */
+    color: #50fa7b;
 }
 
 /* BARRE DES TÂCHES (TASKBAR) */
@@ -206,9 +205,140 @@ body {
 }
 
 .clock {
-    margin-left: auto; /* Pousse l'heure à droite */
+    margin-left: auto;
     margin-right: 20px;
     font-family: 'Orbitron', monospace;
     color: #ff79c6;
     font-weight: bold;
 }
+
+/* --- STYLE SPÉCIFIQUE CULTURE G (MYTHOLOGIE) --- */
+
+.myth-container {
+    background: linear-gradient(to bottom, rgba(16, 16, 24, 0.95), rgba(45, 27, 78, 0.4));
+    color: #eee;
+    padding: 30px;
+}
+
+.myth-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #bd93f9;
+    padding-bottom: 20px;
+}
+
+.myth-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.myth-header p {
+    font-style: italic;
+    color: #ff79c6;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 20px;
+    border-left: 2px dashed #444;
+}
+
+.myth-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #bd93f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.myth-card:hover {
+    transform: translateX(5px);
+    box-shadow: -5px 5px 0px rgba(189, 147, 249, 0.3);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+/* Style des images locales */
+.myth-img {
+    width: 100%;
+    height: auto;          /* S'adapte automatiquement */
+    max-height: 500px;     /* <--- C'est ici ! (Avant c'était 300px) */
+    object-fit: cover;     /* Recadre l'image proprement sans l'écraser */
+    border-radius: 4px;
+    margin: 15px 0;
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    opacity: 0.9;          /* Je l'ai mise un peu plus visible par défaut */
+    transition: all 0.3s ease;
+}
+
+/* L'image s'éclaire et grandit quand on survole la carte */
+.myth-card:hover .myth-img {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    transform: scale(1.05); /* Zoom léger de 5% */
+}
+
+.myth-number {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background: #000;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.myth-card h2 {
+    color: #ffd700;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.myth-card p {
+    line-height: 1.6;
+    font-size: 1.05em;
+    color: #dcdcdc;
+}
+
+.myth-card strong {
+    color: #ff79c6;
+}
+
+.gods-list {
+    list-style: none;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 3px solid #ffd700;
+}
+
+.gods-list li {
+    margin-bottom: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+.myth-footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #444;
+    font-family: 'Courier New', monospace;
+}
+

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NoanOS - Portfolio</title>
-    <link rel="stylesheet" href="/HeinryNoan.github.io/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,12 +24,15 @@
                 <div class="icon-img">💻</div>
                 <span>Compétences</span>
             </div>
+            <div class="icon" onclick="openWindow('culture')">
+                <div class="icon-img">🏛️</div>
+                <span>Culture G</span>
+            </div>
             <div class="icon" onclick="openWindow('contact')">
                 <div class="icon-img">📧</div>
                 <span>Contact</span>
             </div>
         </div>
-
         <div id="about" class="window">
             <div class="title-bar">
                 <div class="title-text">user_info.exe</div>
@@ -39,16 +42,25 @@
             </div>
             <div class="window-content">
                 <div class="profile-header">
-                    <img src="avatar.jpg" alt="Noan" class="pixel-avatar">
-                    <h2>Noan Heinry</h2>
-                    <p class="tagline">Étudiant BUT Info | Développeur</p>
+                    <img src="images/avatar.jpg" alt="Noan" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 2px solid #bd93f9; display: block; margin: 0 auto 10px;">
+                    
+                    <h2 style="text-align: center;">Noan HEINRY</h2>
+                    <p class="tagline" style="text-align: center; color: #aaa;">Étudiant BUT Informatique | Recherche de stage (Avril 2026)</p>
                 </div>
-                <p>Étudiant passionné par le développement logiciel, les bases de données et les systèmes. En recherche de stage pour avril 2026.</p>
+
+                <p>Actuellement en 2ème année de BUT Informatique, je suis à la recherche d'un <strong>stage de 8 à 12 semaines</strong> en développement informatique à partir du <strong>13 avril 2026</strong>.</p>
+                
+                <h3>Qualités & Atouts</h3>
+                <ul>
+                    <li>✨ Dynamisme & Curiosité</li>
+                    <li>🤝 Esprit d'équipe & Autonomie</li>
+                    <li>🧠 Esprit d'analyse & Organisation</li>
+                </ul>
+
                 <h3>Centres d'intérêt</h3>
                 <ul>
-                    <li>🎮 Gaming & Stratégie</li>
-                    <li>🛕 Gymnastique (9 ans)</li>
-                    <li>🚗 Tech embarquée</li>
+                    <li>🛕 Gymnastique Haut niveau (9 ans)</li>
+                    <li>🏀 Pratique régulière Volleyball et Basketball</li>
                 </ul>
             </div>
         </div>
@@ -104,6 +116,74 @@
             </div>
         </div>
 
+        <div id="culture" class="window" style="width: 60%; height: 80vh; max-height: 80vh;">
+            <div class="title-bar">
+                <div class="title-text">greek_mythology.db</div>
+                <div class="window-controls">
+                    <button class="close-btn" onclick="closeWindow('culture')">X</button>
+                </div>
+            </div>
+            
+            <div class="window-content myth-container">
+                <header class="myth-header">
+                    <h1>L'Odyssée des Dieux</h1>
+                    <p>Une plongée dans le chaos originel et l'ascension de l'Olympe.</p>
+                </header>
+
+                <div class="timeline">
+                    <div class="myth-card">
+                        <div class="myth-number">I</div>
+                        <h2>Le Chaos Originel</h2>
+                        <img src="images/chaos.jpg" alt="Le Chaos et la création" class="myth-img">
+                        <p>
+                            Au commencement, il n'y avait que le <strong>Chaos</strong>. De ce vide insondable naquirent Gaia (la Terre) et Ouranos (le Ciel). 
+                            Ensemble, ils engendrèrent les terribles Titans. Mais Ouranos, craignant la puissance de ses enfants, les enferma dans les entrailles de la Terre.
+                        </p>
+                    </div>
+
+                    <div class="myth-card right">
+                        <div class="myth-number">II</div>
+                        <h2>La Révolte de Cronos</h2>
+                        <img src="images/cronos.jpg" alt="Cronos prenant le pouvoir" class="myth-img">
+                        <p>
+                            Gaia, furieuse, demanda de l'aide à ses enfants. Seul <strong>Cronos</strong>, le plus jeune des Titans, osa se dresser. 
+                            Armé d'une faucille, il renversa son père et prit le pouvoir. L'Âge d'Or commença, mais une prophétie le hantait : 
+                            il serait à son tour détrôné par l'un de ses fils.
+                        </p>
+                    </div>
+
+                    <div class="myth-card">
+                        <div class="myth-number">III</div>
+                        <h2>La Titanomachie</h2>
+                        <img src="images/titanomachie.jpg" alt="La guerre des Titans" class="myth-img">
+                        <p>
+                            Pour déjouer le destin, Cronos dévorait ses enfants dès leur naissance. Mais sa femme, Rhéa, sauva le petit <strong>Zeus</strong> 
+                            en le cachant en Crète. Devenu adulte, Zeus fit boire une potion à son père pour qu'il recrache ses frères et sœurs. 
+                            Une guerre cosmique de dix ans éclata alors : les Dieux contre les Titans.
+                        </p>
+                    </div>
+
+                    <div class="myth-card right">
+                        <div class="myth-number">IV</div>
+                        <h2>Le Règne de l'Olympe</h2>
+                        <img src="images/olympe.jpg" alt="Les Dieux de l'Olympe" class="myth-img">
+                        <p>
+                            Victorieux, les trois frères se partagèrent le monde :
+                        </p>
+                        <ul class="gods-list">
+                            <li>⚡ <strong>Zeus</strong> : Roi des Dieux, maître du Ciel et de la Foudre.</li>
+                            <li>🌊 <strong>Poséidon</strong> : Maître des Océans et des séismes.</li>
+                            <li>💀 <strong>Hadès</strong> : Gardien des Enfers et du monde souterrain.</li>
+                        </ul>
+                        <p>Depuis le Mont Olympe, ils observent les hommes, jouant avec leurs destins comme sur un échiquier éternel.</p>
+                    </div>
+                    
+                    <div class="myth-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="contact" class="window small-window">
             <div class="title-bar">
                 <div class="title-text">msg_service.exe</div>
@@ -127,6 +207,7 @@
         <button class="task-btn" onclick="openWindow('about')">👤 Info</button>
         <button class="task-btn" onclick="openWindow('projects')">🚀 Projets</button>
         <button class="task-btn" onclick="openWindow('skills')">💻 Compétences</button>
+        <button class="task-btn" onclick="openWindow('culture')">🏛️ Culture</button>
         <div class="clock" id="clock">12:00</div>
     </div>
 
@@ -134,9 +215,8 @@
         function openWindow(id) {
             const windows = document.querySelectorAll('.window');
             windows.forEach(w => w.style.display = 'none');
-            
             const win = document.getElementById(id);
-            win.style.display = 'flex';
+            if(win) win.style.display = 'flex';
         }
 
         function closeWindow(id) {
