@@ -24,6 +24,10 @@
                 <div class="icon-img">💻</div>
                 <span>Compétences</span>
             </div>
+            <div class="icon" onclick="openWindow('but-info')">
+                <div class="icon-img">🎓</div>
+                <span>BUT Info</span>
+            </div>
             <div class="icon" onclick="openWindow('culture')">
                 <div class="icon-img">🏛️</div>
                 <span>Culture G</span>
@@ -33,6 +37,7 @@
                 <span>Contact</span>
             </div>
         </div>
+
         <div id="about" class="window">
             <div class="title-bar">
                 <div class="title-text">user_info.exe</div>
@@ -46,7 +51,13 @@
                     
                     <h2 style="text-align: center;">Noan HEINRY</h2>
                     <p class="tagline" style="text-align: center; color: #aaa;">Étudiant BUT Informatique | Recherche de stage (Avril 2026)</p>
-                </div>
+                    
+                    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+                        <a href="documents/cv_noan_heinry.pdf" download="CV_Noan_HEINRY.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
+                            📄 Télécharger mon CV
+                        </a>
+                    </div>
+                    </div>
 
                 <p>Actuellement en 2ème année de BUT Informatique, je suis à la recherche d'un <strong>stage de 8 à 12 semaines</strong> en développement informatique à partir du <strong>13 avril 2026</strong>.</p>
                 
@@ -113,6 +124,290 @@
                     <li>> DB: MySQL, SQL, NoSql; mongoDB</li>
                     <li>> Outils: Git, Linux, Figma</li>
                 </ul>
+            </div>
+        </div>
+
+        <div id="but-info" class="window" style="width: 90%; height: 85vh; max-width: 1200px; max-height: 85vh;">
+            <div class="title-bar">
+                <div class="title-text">curriculum_tracker.xlsx</div>
+                <div class="window-controls">
+                    <button class="close-btn" onclick="closeWindow('but-info')">X</button>
+                </div>
+            </div>
+            
+            <div class="window-content but-container">
+                <h2 style="text-align: center; margin-bottom: 30px;">🎓 BUT Informatique - Suivi de Compétences</h2>
+
+                <div class="but-section">
+                    <h3>Compétence 1 : Réaliser</h3>
+                    <span class="but-subtitle">Partir des exigences et aller jusqu’à une application complète</span>
+                    
+                    <table class="but-table">
+                        <thead>
+                            <tr>
+                                <th>Apprentissage Critique (AC)</th>
+                                <th class="col-non-acquis">❌ Non acquis</th>
+                                <th class="col-en-cours">⚠️ En cours</th>
+                                <th class="col-acquis">✅ Acquis</th>
+                                <th class="col-preuves">➡️ Preuves</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AC1 — Spécifications</td>
+                                <td><ul><li>Exigences non comprises</li><li>Manque de documents</li><li>Fonctionnalités absentes</li></ul></td>
+                                <td><ul><li>Spécifications partielles</li><li>Critères incomplets</li><li>Contraintes oubliées</li></ul></td>
+                                <td><ul><li>Spécifications structurées</li><li>Besoins traduits</li><li>Critères validés</li></ul></td>
+                                <td><ul><li>User stories / UML</li><li>Tableau traçabilité</li><li>Cahier des charges</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC2 — Accessibilité & Ergo</td>
+                                <td><ul><li>Interface inutilisable</li><li>Illisible</li><li>Navigation incohérente</li></ul></td>
+                                <td><ul><li>Peu intuitif</li><li>Accessibilité partielle</li><li>Responsive buggé</li></ul></td>
+                                <td><ul><li>Interface fluide</li><li>Normes respectées (ARIA)</li><li>Feedback utilisateur</li></ul></td>
+                                <td><ul><li>Checklist ergonomique</li><li>Tests utilisateurs</li><li>Maquettes Figma</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC3 — Conception</td>
+                                <td><ul><li>Code confus</li><li>Tout dans un fichier</li><li>Variables floues</li></ul></td>
+                                <td><ul><li>Architecture améliorable</li><li>Git désorganisé</li></ul></td>
+                                <td><ul><li>Architecture propre</li><li>Code documenté</li><li>Git propre (branches)</li></ul></td>
+                                <td><ul><li>Diagramme d'archi</li><li>Code modulaire</li><li>Historique Git</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC4 — Tests</td>
+                                <td><ul><li>Aucun test</li><li>Bugs non vus</li></ul></td>
+                                <td><ul><li>Tests partiels</li><li>Pas d'automatisation</li></ul></td>
+                                <td><ul><li>Tests complets</li><li>Analysés et automatisés</li></ul></td>
+                                <td><ul><li>Rapport de tests</li><li>Pipeline CI/CD</li></ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="but-section">
+                    <h3>Compétence 2 : Optimiser</h3>
+                    <span class="but-subtitle">Sélectionner les algorithmes adéquats (Semestre 3)</span>
+                    
+                    <table class="but-table">
+                        <thead>
+                            <tr>
+                                <th>AC</th>
+                                <th class="col-non-acquis">❌ Non acquis</th>
+                                <th class="col-en-cours">⚠️ En cours</th>
+                                <th class="col-acquis">✅ Acquis</th>
+                                <th class="col-preuves">➡️ Preuves</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AC1 — Structures de données</td>
+                                <td><ul><li>Structure inadaptée</li><li>Données dupliquées</li><li>Choix par habitude</li></ul></td>
+                                <td><ul><li>Choix cohérent non justifié</li><li>Structures avancées utilisées</li></ul></td>
+                                <td><ul><li>Comparaison des structures</li><li>Optimisation mémoire/perf</li><li>Choix justifié</li></ul></td>
+                                <td><ul><li>Analyse dans README</li><li>Extraits code</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC2 — Algorithmes</td>
+                                <td><ul><li>Résultats faux</li><li>Algo inadapté</li><li>Solution au hasard</li></ul></td>
+                                <td><ul><li>Fonctionnel mais lent</li><li>Optimisations mineures</li></ul></td>
+                                <td><ul><li>Choix selon contraintes</li><li>Analyse complexité Big-O</li></ul></td>
+                                <td><ul><li>Benchmarks</li><li>Schéma algo</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC3 — Sécurité algo</td>
+                                <td><ul><li>Données non vérifiées</li><li>Plantages exploitables</li></ul></td>
+                                <td><ul><li>Filtrage partiel</li><li>Gestion erreur partielle</li></ul></td>
+                                <td><ul><li>Vérification complète</li><li>Anti-injection/overflow</li><li>Logs erreurs</li></ul></td>
+                                <td><ul><li>Tests d'attaques</li><li>Logs</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC4 — Eco-conception</td>
+                                <td><ul><li>Gaspillage ressources</li><li>Pas de réflexion impact</li></ul></td>
+                                <td><ul><li>Optimisations sans justification</li><li>Impact évoqué après coup</li></ul></td>
+                                <td><ul><li>Optimisation dès conception</li><li>Solution économe</li></ul></td>
+                                <td><ul><li>Profiling conso</li><li>Rapport éco-conception</li></ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="but-section">
+                    <h3>Compétence 3 : Administrer</h3>
+                    <span class="but-subtitle">Déployer des services dans une architecture réseau</span>
+                    
+                    <table class="but-table">
+                        <thead>
+                            <tr>
+                                <th>AC</th>
+                                <th class="col-non-acquis">❌ Non acquis</th>
+                                <th class="col-en-cours">⚠️ En cours</th>
+                                <th class="col-acquis">✅ Acquis</th>
+                                <th class="col-preuves">➡️ Preuves</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AC1 — Apps communicantes</td>
+                                <td><ul><li>Pas de communication</li><li>Mauvais protocole</li></ul></td>
+                                <td><ul><li>Instable</li><li>Protocole non justifié</li></ul></td>
+                                <td><ul><li>Communication fiable</li><li>Protocole adapté</li><li>Gestion erreurs</li></ul></td>
+                                <td><ul><li>Wireshark / Postman</li><li>Schéma échanges</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC2 — Déploiement</td>
+                                <td><ul><li>Non déployé</li><li>Mauvaise config réseau</li></ul></td>
+                                <td><ul><li>Fonctionnel mais instable</li><li>Accessible localement</li></ul></td>
+                                <td><ul><li>Service en ligne stable</li><li>Déploiement structuré (Docker)</li></ul></td>
+                                <td><ul><li>Dockerfile</li><li>Manuel install</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC3 — Sécurité services</td>
+                                <td><ul><li>Ports ouverts</li><li>En clair</li></ul></td>
+                                <td><ul><li>Auth basique</li><li>Firewall partiel</li></ul></td>
+                                <td><ul><li>Permissions précises</li><li>TLS/HTTPS</li><li>Vulnérabilités corrigées</li></ul></td>
+                                <td><ul><li>Rapport nmap</li><li>Certificats SSL</li></ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="but-section">
+                    <h3>Compétence 4 : Gérer des données</h3>
+                    <span class="but-subtitle">Optimiser une BDD, interagir et sécuriser</span>
+                    
+                    <table class="but-table">
+                        <thead>
+                            <tr>
+                                <th>AC</th>
+                                <th class="col-non-acquis">❌ Non acquis</th>
+                                <th class="col-en-cours">⚠️ En cours</th>
+                                <th class="col-acquis">✅ Acquis</th>
+                                <th class="col-preuves">➡️ Preuves</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AC1 — Conception BDD</td>
+                                <td><ul><li>Relations erronées</li><li>Redondances</li><li>Pas de contraintes</li></ul></td>
+                                <td><ul><li>Modèle correct</li><li>Normalisation partielle</li></ul></td>
+                                <td><ul><li>Modèle normalisé</li><li>Contraintes intégrité</li><li>Pensé performance</li></ul></td>
+                                <td><ul><li>MCD / MLD</li><li>Script SQL</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC2 — SQL</td>
+                                <td><ul><li>Requêtes fausses</li><li>Jointures ratées</li></ul></td>
+                                <td><ul><li>Correct mais lent</li><li>Fonctions avancées floues</li></ul></td>
+                                <td><ul><li>Requêtes efficaces</li><li>Agrégations maîtrisées</li></ul></td>
+                                <td><ul><li>Comparaison requêtes</li><li>Résultats</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC3 — Connexion App</td>
+                                <td><ul><li>Pas de lien BDD</li><li>Requêtes dans l'interface</li></ul></td>
+                                <td><ul><li>Connexion ok</li><li>Archi floue</li><li>Config insécurisée</li></ul></td>
+                                <td><ul><li>Archi claire (DAO/ORM)</li><li>Config externe (.env)</li></ul></td>
+                                <td><ul><li>Code DAO</li><li>Schéma archi</li></ul></td>
+                            </tr>
+                             <tr>
+                                <td>AC4 — Sécurité BDD</td>
+                                <td><ul><li>Mots de passe clair</li><li>Injections SQL possibles</li></ul></td>
+                                <td><ul><li>Requêtes préparées (partiel)</li><li>Rôles partiels</li></ul></td>
+                                <td><ul><li>Requêtes préparées</li><li>Gestion droits/rôles</li><li>Logs sécu</li></ul></td>
+                                <td><ul><li>Tests injections</li><li>Config Rôles</li></ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                 <div class="but-section">
+                    <h3>Compétence 5 : Conduire</h3>
+                    <span class="but-subtitle">Gestion de projet et besoins métier</span>
+                    
+                    <table class="but-table">
+                        <thead>
+                            <tr>
+                                <th>AC</th>
+                                <th class="col-non-acquis">❌ Non acquis</th>
+                                <th class="col-en-cours">⚠️ En cours</th>
+                                <th class="col-acquis">✅ Acquis</th>
+                                <th class="col-preuves">➡️ Preuves</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AC1 — Besoins</td>
+                                <td><ul><li>Incompréhension</li><li>Hors-sujet</li></ul></td>
+                                <td><ul><li>Compréhension globale</li><li>Hypothèses non validées</li></ul></td>
+                                <td><ul><li>Attentes claires</li><li>Validation client</li></ul></td>
+                                <td><ul><li>User stories</li><li>Notes entretien</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC2 — Planification</td>
+                                <td><ul><li>Aucune orga</li><li>Délais dépassés</li></ul></td>
+                                <td><ul><li>Orga peu maintenue</li><li>Réaction lente</li></ul></td>
+                                <td><ul><li>Planification à jour</li><li>Suivi transparent</li><li>Priorités gérées</li></ul></td>
+                                <td><ul><li>Trello / Jira</li><li>Gantt</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC3 — Communication</td>
+                                <td><ul><li>Pas d'info transmise</li><li>Quiproquos</li></ul></td>
+                                <td><ul><li>Info peu claire</li><li>CR incomplets</li></ul></td>
+                                <td><ul><li>Com régulière</li><li>Adaptée au public</li><li>CR structurés</li></ul></td>
+                                <td><ul><li>CR réunion</li><li>Slides</li></ul></td>
+                            </tr>
+                             <tr>
+                                <td>AC4 — Qualité</td>
+                                <td><ul><li>Pas de vérif</li><li>Pas de retour</li></ul></td>
+                                <td><ul><li>Vérif sans méthode</li><li>Améliorations ignorées</li></ul></td>
+                                <td><ul><li>Mesure conformité</li><li>Améliorations concrètes</li><li>Retours analysés</li></ul></td>
+                                <td><ul><li>Rapport qualité</li><li>Analyse métriques</li></ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="but-section">
+                    <h3>Compétence 6 : Collaborer</h3>
+                    <span class="but-subtitle">Travailler en équipe informatique</span>
+                    
+                    <table class="but-table">
+                        <thead>
+                            <tr>
+                                <th>AC</th>
+                                <th class="col-non-acquis">❌ Non acquis</th>
+                                <th class="col-en-cours">⚠️ En cours</th>
+                                <th class="col-acquis">✅ Acquis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AC1 — Positionnement</td>
+                                <td><ul><li>Absent réunions</li><li>Décisions ignorées</li></ul></td>
+                                <td><ul><li>Tâches isolées</li><li>Adaptation difficile</li></ul></td>
+                                <td><ul><li>Compréhension globale</li><li>Respect du cadre</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC2 — Com équipe</td>
+                                <td><ul><li>Problèmes tus</li><li>Messages ignorés</li></ul></td>
+                                <td><ul><li>Irrégulier</li><li>Info peu utile</li></ul></td>
+                                <td><ul><li>Partage utile</li><li>Contribution active</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC3 — Orga perso</td>
+                                <td><ul><li>Retards</li><li>Tâches non finies</li></ul></td>
+                                <td><ul><li>Délais parfois ok</li><li>Manque cohérence</li></ul></td>
+                                <td><ul><li>Planification efficace</li><li>Délais respectés</li></ul></td>
+                            </tr>
+                             <tr>
+                                <td>AC4 — Attitude</td>
+                                <td><ul><li>Remarques ignorées</li><li>Perturbation</li></ul></td>
+                                <td><ul><li>Manque initiative</li><li>Implication variable</li></ul></td>
+                                <td><ul><li>Constructif</li><li>Responsable</li></ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
 
@@ -207,6 +502,7 @@
         <button class="task-btn" onclick="openWindow('about')">👤 Info</button>
         <button class="task-btn" onclick="openWindow('projects')">🚀 Projets</button>
         <button class="task-btn" onclick="openWindow('skills')">💻 Compétences</button>
+        <button class="task-btn" onclick="openWindow('but-info')">🎓 BUT Info</button>
         <button class="task-btn" onclick="openWindow('culture')">🏛️ Culture</button>
         <div class="clock" id="clock">12:00</div>
     </div>
