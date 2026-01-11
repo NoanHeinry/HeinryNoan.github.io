@@ -342,3 +342,78 @@ body {
     font-family: 'Courier New', monospace;
 }
 
+/* --- STYLE SPÉCIFIQUE BUT INFORMATIQUE (TABLEAUX) --- */
+
+.but-container {
+    padding-bottom: 20px;
+}
+
+.but-section {
+    margin-bottom: 40px;
+}
+
+.but-section h3 {
+    color: #ffd700; /* Or pour les titres de compétences */
+    border-bottom: 2px solid #bd93f9;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.but-subtitle {
+    font-style: italic;
+    color: #ff79c6;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Style du tableau */
+.but-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.but-table th, .but-table td {
+    border: 1px solid #444;
+    padding: 12px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.but-table th {
+    background: rgba(189, 147, 249, 0.2); /* Fond violet léger */
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+/* Largeur de la première colonne (AC) */
+.but-table th:first-child, .but-table td:first-child {
+    width: 15%;
+    font-weight: bold;
+    color: #bd93f9;
+}
+
+/* Cellules de contenu */
+.but-table ul {
+    margin: 0;
+    padding-left: 15px;
+    list-style-type: square;
+}
+
+.but-table li {
+    margin-bottom: 5px;
+    color: #ddd;
+}
+
+.but-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Couleurs spécifiques pour les en-têtes de colonnes si tu veux */
+.col-non-acquis { color: #ff5555; }
+.col-en-cours { color: #ffb86c; }
+.col-acquis { color: #50fa7b; }
+.col-preuves { color: #8be9fd; }
