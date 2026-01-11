@@ -6,6 +6,7 @@
     <title>NoanOS - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
     
@@ -38,6 +39,45 @@
             </div>
         </div>
 
+        <div class="center-screen">
+            <div class="hero-logo">
+                NOAN<span class="highlight">OS</span>
+            </div>
+            <div class="hero-subtitle">System ready. Waiting for input...</div>
+            
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Rechercher une compétence, un projet..." disabled>
+                <span class="command-hint">CTRL + K</span>
+            </div>
+        </div>
+
+        <div class="system-widget">
+            <div class="widget-header">NOAN_OS v2.0 <span class="status-dot"></span></div>
+            
+            <div class="widget-time" id="widget-time">00:00</div>
+            <div class="widget-date" id="widget-date">Chargement...</div>
+            
+            <div class="widget-separator"></div>
+
+            <div class="typewriter-container">
+                <p>> Initializing portfolio...</p>
+                <p>> User: <span style="color: #bd93f9;">Recruiter</span> detected.</p>
+                <p>> Status: <span style="color: #50fa7b;">Ready to work</span>.</p>
+            </div>
+
+            <div class="sys-stats">
+                <div class="stat-row">
+                    <span>CPU</span>
+                    <div class="stat-bar"><div class="stat-fill cpu-anim"></div></div>
+                </div>
+                <div class="stat-row">
+                    <span>RAM</span>
+                    <div class="stat-bar"><div class="stat-fill ram-anim"></div></div>
+                </div>
+            </div>
+        </div>
+
         <div id="about" class="window">
             <div class="title-bar">
                 <div class="title-text">user_info.exe</div>
@@ -57,7 +97,7 @@
                             📄 Télécharger mon CV
                         </a>
                     </div>
-                    </div>
+                </div>
 
                 <p>Actuellement en 2ème année de BUT Informatique, je suis à la recherche d'un <strong>stage de 8 à 12 semaines</strong> en développement informatique à partir du <strong>13 avril 2026</strong>.</p>
                 
@@ -109,21 +149,84 @@
             </div>
         </div>
 
-        <div id="skills" class="window">
+        <div id="skills" class="window" style="width: 700px;">
             <div class="title-bar">
-                <div class="title-text">system_status.log</div>
+                <div class="title-text">system_modules.exe</div>
                 <div class="window-controls">
                     <button class="close-btn" onclick="closeWindow('skills')">X</button>
                 </div>
             </div>
             <div class="window-content">
-                <h3>Stack Technique</h3>
-                <ul class="terminal-list">
-                    <li>> Langages: Python, Java, C, PHP, JavaFX</li>
-                    <li>> Web: HTML, CSS, JS, Node.js</li>
-                    <li>> DB: MySQL, SQL, NoSql; mongoDB</li>
-                    <li>> Outils: Git, Linux, Figma</li>
-                </ul>
+                
+                <div class="skill-category">
+                    <h3>💻 Langages de programmation</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <i class="devicon-python-plain colored"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-java-plain colored"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-c-plain colored"></i>
+                            <span>C</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-php-plain colored"></i>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🌐 Développement Web</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-css3-plain colored"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-nodejs-plain colored"></i>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>💾 Bases de données & Outils</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-mongodb-plain colored"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-git-plain colored"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-linux-plain"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="devicon-figma-plain colored"></i>
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -141,7 +244,6 @@
                 <div class="but-section">
                     <h3>Compétence 1 : Réaliser</h3>
                     <span class="but-subtitle">Partir des exigences et aller jusqu’à une application complète</span>
-                    
                     <table class="but-table">
                         <thead>
                             <tr>
@@ -155,24 +257,24 @@
                         <tbody>
                             <tr>
                                 <td>AC1 — Spécifications</td>
-                                <td><ul><li>Exigences non comprises</li><li>Manque de documents</li><li>Fonctionnalités absentes</li></ul></td>
-                                <td><ul><li>Spécifications partielles</li><li>Critères incomplets</li><li>Contraintes oubliées</li></ul></td>
-                                <td><ul><li>Spécifications structurées</li><li>Besoins traduits</li><li>Critères validés</li></ul></td>
-                                <td><ul><li>User stories / UML</li><li>Tableau traçabilité</li><li>Cahier des charges</li></ul></td>
+                                <td><ul><li>Exigences non comprises</li><li>Manque de documents</li></ul></td>
+                                <td><ul><li>Spécifications partielles</li><li>Critères incomplets</li></ul></td>
+                                <td><ul><li>Spécifications structurées</li><li>Besoins traduits</li></ul></td>
+                                <td><ul><li>User stories / UML</li><li>Tableau traçabilité</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC2 — Accessibilité & Ergo</td>
-                                <td><ul><li>Interface inutilisable</li><li>Illisible</li><li>Navigation incohérente</li></ul></td>
-                                <td><ul><li>Peu intuitif</li><li>Accessibilité partielle</li><li>Responsive buggé</li></ul></td>
-                                <td><ul><li>Interface fluide</li><li>Normes respectées (ARIA)</li><li>Feedback utilisateur</li></ul></td>
-                                <td><ul><li>Checklist ergonomique</li><li>Tests utilisateurs</li><li>Maquettes Figma</li></ul></td>
+                                <td><ul><li>Interface inutilisable</li><li>Illisible</li></ul></td>
+                                <td><ul><li>Peu intuitif</li><li>Accessibilité partielle</li></ul></td>
+                                <td><ul><li>Interface fluide</li><li>Normes respectées (ARIA)</li></ul></td>
+                                <td><ul><li>Checklist ergonomique</li><li>Tests utilisateurs</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC3 — Conception</td>
-                                <td><ul><li>Code confus</li><li>Tout dans un fichier</li><li>Variables floues</li></ul></td>
+                                <td><ul><li>Code confus</li><li>Tout dans un fichier</li></ul></td>
                                 <td><ul><li>Architecture améliorable</li><li>Git désorganisé</li></ul></td>
-                                <td><ul><li>Architecture propre</li><li>Code documenté</li><li>Git propre (branches)</li></ul></td>
-                                <td><ul><li>Diagramme d'archi</li><li>Code modulaire</li><li>Historique Git</li></ul></td>
+                                <td><ul><li>Architecture propre</li><li>Code documenté</li></ul></td>
+                                <td><ul><li>Diagramme d'archi</li><li>Code modulaire</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC4 — Tests</td>
@@ -188,7 +290,6 @@
                 <div class="but-section">
                     <h3>Compétence 2 : Optimiser</h3>
                     <span class="but-subtitle">Sélectionner les algorithmes adéquats (Semestre 3)</span>
-                    
                     <table class="but-table">
                         <thead>
                             <tr>
@@ -202,14 +303,14 @@
                         <tbody>
                             <tr>
                                 <td>AC1 — Structures de données</td>
-                                <td><ul><li>Structure inadaptée</li><li>Données dupliquées</li><li>Choix par habitude</li></ul></td>
+                                <td><ul><li>Structure inadaptée</li><li>Choix par habitude</li></ul></td>
                                 <td><ul><li>Choix cohérent non justifié</li><li>Structures avancées utilisées</li></ul></td>
-                                <td><ul><li>Comparaison des structures</li><li>Optimisation mémoire/perf</li><li>Choix justifié</li></ul></td>
+                                <td><ul><li>Comparaison des structures</li><li>Optimisation mémoire/perf</li></ul></td>
                                 <td><ul><li>Analyse dans README</li><li>Extraits code</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC2 — Algorithmes</td>
-                                <td><ul><li>Résultats faux</li><li>Algo inadapté</li><li>Solution au hasard</li></ul></td>
+                                <td><ul><li>Résultats faux</li><li>Algo inadapté</li></ul></td>
                                 <td><ul><li>Fonctionnel mais lent</li><li>Optimisations mineures</li></ul></td>
                                 <td><ul><li>Choix selon contraintes</li><li>Analyse complexité Big-O</li></ul></td>
                                 <td><ul><li>Benchmarks</li><li>Schéma algo</li></ul></td>
@@ -218,7 +319,7 @@
                                 <td>AC3 — Sécurité algo</td>
                                 <td><ul><li>Données non vérifiées</li><li>Plantages exploitables</li></ul></td>
                                 <td><ul><li>Filtrage partiel</li><li>Gestion erreur partielle</li></ul></td>
-                                <td><ul><li>Vérification complète</li><li>Anti-injection/overflow</li><li>Logs erreurs</li></ul></td>
+                                <td><ul><li>Vérification complète</li><li>Anti-injection/overflow</li></ul></td>
                                 <td><ul><li>Tests d'attaques</li><li>Logs</li></ul></td>
                             </tr>
                             <tr>
@@ -235,7 +336,6 @@
                 <div class="but-section">
                     <h3>Compétence 3 : Administrer</h3>
                     <span class="but-subtitle">Déployer des services dans une architecture réseau</span>
-                    
                     <table class="but-table">
                         <thead>
                             <tr>
@@ -251,7 +351,7 @@
                                 <td>AC1 — Apps communicantes</td>
                                 <td><ul><li>Pas de communication</li><li>Mauvais protocole</li></ul></td>
                                 <td><ul><li>Instable</li><li>Protocole non justifié</li></ul></td>
-                                <td><ul><li>Communication fiable</li><li>Protocole adapté</li><li>Gestion erreurs</li></ul></td>
+                                <td><ul><li>Communication fiable</li><li>Protocole adapté</li></ul></td>
                                 <td><ul><li>Wireshark / Postman</li><li>Schéma échanges</li></ul></td>
                             </tr>
                             <tr>
@@ -265,7 +365,7 @@
                                 <td>AC3 — Sécurité services</td>
                                 <td><ul><li>Ports ouverts</li><li>En clair</li></ul></td>
                                 <td><ul><li>Auth basique</li><li>Firewall partiel</li></ul></td>
-                                <td><ul><li>Permissions précises</li><li>TLS/HTTPS</li><li>Vulnérabilités corrigées</li></ul></td>
+                                <td><ul><li>Permissions précises</li><li>TLS/HTTPS</li></ul></td>
                                 <td><ul><li>Rapport nmap</li><li>Certificats SSL</li></ul></td>
                             </tr>
                         </tbody>
@@ -275,7 +375,6 @@
                 <div class="but-section">
                     <h3>Compétence 4 : Gérer des données</h3>
                     <span class="but-subtitle">Optimiser une BDD, interagir et sécuriser</span>
-                    
                     <table class="but-table">
                         <thead>
                             <tr>
@@ -289,9 +388,9 @@
                         <tbody>
                             <tr>
                                 <td>AC1 — Conception BDD</td>
-                                <td><ul><li>Relations erronées</li><li>Redondances</li><li>Pas de contraintes</li></ul></td>
+                                <td><ul><li>Relations erronées</li><li>Redondances</li></ul></td>
                                 <td><ul><li>Modèle correct</li><li>Normalisation partielle</li></ul></td>
-                                <td><ul><li>Modèle normalisé</li><li>Contraintes intégrité</li><li>Pensé performance</li></ul></td>
+                                <td><ul><li>Modèle normalisé</li><li>Contraintes intégrité</li></ul></td>
                                 <td><ul><li>MCD / MLD</li><li>Script SQL</li></ul></td>
                             </tr>
                             <tr>
@@ -304,7 +403,7 @@
                             <tr>
                                 <td>AC3 — Connexion App</td>
                                 <td><ul><li>Pas de lien BDD</li><li>Requêtes dans l'interface</li></ul></td>
-                                <td><ul><li>Connexion ok</li><li>Archi floue</li><li>Config insécurisée</li></ul></td>
+                                <td><ul><li>Connexion ok</li><li>Archi floue</li></ul></td>
                                 <td><ul><li>Archi claire (DAO/ORM)</li><li>Config externe (.env)</li></ul></td>
                                 <td><ul><li>Code DAO</li><li>Schéma archi</li></ul></td>
                             </tr>
@@ -312,7 +411,7 @@
                                 <td>AC4 — Sécurité BDD</td>
                                 <td><ul><li>Mots de passe clair</li><li>Injections SQL possibles</li></ul></td>
                                 <td><ul><li>Requêtes préparées (partiel)</li><li>Rôles partiels</li></ul></td>
-                                <td><ul><li>Requêtes préparées</li><li>Gestion droits/rôles</li><li>Logs sécu</li></ul></td>
+                                <td><ul><li>Requêtes préparées</li><li>Gestion droits/rôles</li></ul></td>
                                 <td><ul><li>Tests injections</li><li>Config Rôles</li></ul></td>
                             </tr>
                         </tbody>
@@ -322,7 +421,6 @@
                  <div class="but-section">
                     <h3>Compétence 5 : Conduire</h3>
                     <span class="but-subtitle">Gestion de projet et besoins métier</span>
-                    
                     <table class="but-table">
                         <thead>
                             <tr>
@@ -345,21 +443,21 @@
                                 <td>AC2 — Planification</td>
                                 <td><ul><li>Aucune orga</li><li>Délais dépassés</li></ul></td>
                                 <td><ul><li>Orga peu maintenue</li><li>Réaction lente</li></ul></td>
-                                <td><ul><li>Planification à jour</li><li>Suivi transparent</li><li>Priorités gérées</li></ul></td>
+                                <td><ul><li>Planification à jour</li><li>Suivi transparent</li></ul></td>
                                 <td><ul><li>Trello / Jira</li><li>Gantt</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC3 — Communication</td>
                                 <td><ul><li>Pas d'info transmise</li><li>Quiproquos</li></ul></td>
                                 <td><ul><li>Info peu claire</li><li>CR incomplets</li></ul></td>
-                                <td><ul><li>Com régulière</li><li>Adaptée au public</li><li>CR structurés</li></ul></td>
+                                <td><ul><li>Com régulière</li><li>Adaptée au public</li></ul></td>
                                 <td><ul><li>CR réunion</li><li>Slides</li></ul></td>
                             </tr>
                              <tr>
                                 <td>AC4 — Qualité</td>
                                 <td><ul><li>Pas de vérif</li><li>Pas de retour</li></ul></td>
                                 <td><ul><li>Vérif sans méthode</li><li>Améliorations ignorées</li></ul></td>
-                                <td><ul><li>Mesure conformité</li><li>Améliorations concrètes</li><li>Retours analysés</li></ul></td>
+                                <td><ul><li>Mesure conformité</li><li>Améliorations concrètes</li></ul></td>
                                 <td><ul><li>Rapport qualité</li><li>Analyse métriques</li></ul></td>
                             </tr>
                         </tbody>
@@ -369,7 +467,6 @@
                 <div class="but-section">
                     <h3>Compétence 6 : Collaborer</h3>
                     <span class="but-subtitle">Travailler en équipe informatique</span>
-                    
                     <table class="but-table">
                         <thead>
                             <tr>
@@ -407,7 +504,6 @@
                         </tbody>
                     </table>
                 </div>
-
             </div>
         </div>
 
@@ -452,9 +548,7 @@
                         <h2>La Titanomachie</h2>
                         <img src="images/titanomachie.jpg" alt="La guerre des Titans" class="myth-img">
                         <p>
-                            Pour déjouer le destin, Cronos dévorait ses enfants dès leur naissance. Mais sa femme, Rhéa, sauva le petit <strong>Zeus</strong> 
-                            en le cachant en Crète. Devenu adulte, Zeus fit boire une potion à son père pour qu'il recrache ses frères et sœurs. 
-                            Une guerre cosmique de dix ans éclata alors : les Dieux contre les Titans.
+                            Pour déjouer le destin, Cronos dévorait ses enfants dès leur naissance. Mais sa femme, Rhéa, sauva le petit <strong>Zeus</strong>...
                         </p>
                     </div>
 
@@ -462,35 +556,64 @@
                         <div class="myth-number">IV</div>
                         <h2>Le Règne de l'Olympe</h2>
                         <img src="images/olympe.jpg" alt="Les Dieux de l'Olympe" class="myth-img">
-                        <p>
-                            Victorieux, les trois frères se partagèrent le monde :
-                        </p>
+                        <p>Victorieux, les trois frères se partagèrent le monde...</p>
                         <ul class="gods-list">
-                            <li> <strong>Zeus</strong> : Roi des Dieux, maître du Ciel et de la Foudre.</li>
-                            <li> <strong>Poséidon</strong> : Maître des Océans et des séismes.</li>
-                            <li> <strong>Hadès</strong> : Gardien des Enfers et du monde souterrain.</li>
+                            <li> <strong>Zeus</strong> : Roi des Dieux...</li>
+                            <li> <strong>Poséidon</strong> : Maître des Océans...</li>
+                            <li> <strong>Hadès</strong> : Gardien des Enfers...</li>
                         </ul>
-                        <p>Depuis le Mont Olympe, ils observent les hommes, jouant avec leurs destins comme sur un échiquier éternel.</p>
-                    </div>
-                    
-                    <div class="myth-footer">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="contact" class="window small-window">
+        <div id="contact" class="window" style="width: 500px;">
             <div class="title-bar">
                 <div class="title-text">msg_service.exe</div>
                 <div class="window-controls">
                     <button class="close-btn" onclick="closeWindow('contact')">X</button>
                 </div>
             </div>
-            <div class="window-content center-text">
-                <p>Me contacter :</p>
-                <a href="mailto:heinry.noan16@gmail.com" class="btn">Envoyer un Email</a>
-                <br><br>
-                <a href="https://github.com/NoanHeinry" target="_blank" class="link">GitHub Profile</a>
+            <div class="window-content contact-content">
+                
+                <div class="comm-status">
+                    <span class="blink-dot"></span> CONNEXION SÉCURISÉE ÉTABLIE
+                </div>
+                
+                <p style="text-align: center; color: #ddd; font-style: italic;">
+                    Protocole de transmission prêt. Sélectionnez un canal :
+                </p>
+
+                <div class="contact-actions">
+                    <a href="mailto:heinry.noan16@gmail.com" class="action-card">
+                        <div class="icon-box">📧</div>
+                        <div class="action-details">
+                            <span class="action-title">Envoyer un Email</span>
+                            <span class="action-desc">heinry.noan16@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/NoanHeinry" target="_blank" class="action-card">
+                        <div class="icon-box">
+                            <i class="devicon-github-original"></i>
+                        </div>
+                        <div class="action-details">
+                            <span class="action-title">GitHub Profile</span>
+                            <span class="action-desc">Explorer mes dépôts et codes sources</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/noan-heinry-bb180b357" class="action-card">
+                        <div class="icon-box">
+                            <i class="devicon-linkedin-plain"></i>
+                        </div>
+                        <div class="action-details">
+                            <span class="action-title">LinkedIn</span>
+                            <span class="action-desc">Réseau professionnel</span>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </div>
 
@@ -504,6 +627,8 @@
         <button class="task-btn" onclick="openWindow('skills')">💻 Compétences</button>
         <button class="task-btn" onclick="openWindow('but-info')">🎓 BUT Info</button>
         <button class="task-btn" onclick="openWindow('culture')">🏛️ Culture</button>
+        <button class="task-btn" onclick="openWindow('contact')">📧 Contact</button>
+
         <div class="clock" id="clock">12:00</div>
     </div>
 
@@ -521,9 +646,22 @@
 
         function updateClock() {
             const now = new Date();
+            
             const timeString = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
-            document.getElementById('clock').textContent = timeString;
+            
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const dateString = now.toLocaleDateString('fr-FR', dateOptions);
+
+            const taskClock = document.getElementById('clock');
+            if(taskClock) taskClock.textContent = timeString;
+
+            const widgetTime = document.getElementById('widget-time');
+            const widgetDate = document.getElementById('widget-date');
+            
+            if(widgetTime) widgetTime.textContent = timeString;
+            if(widgetDate) widgetDate.textContent = dateString.charAt(0).toUpperCase() + dateString.slice(1);
         }
+        
         setInterval(updateClock, 1000);
         updateClock();
     </script>
