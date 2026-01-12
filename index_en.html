@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NoanOS - Portfolio (EN)</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    
+    <style>
+        /* Specific style for language switch button */
+        .language-switch {
+            margin-top: 25px;
+            display: flex; align-items: center; justify-content: center; gap: 15px;
+            background: rgba(0,0,0,0.3); padding: 8px 15px; border-radius: 20px;
+            backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1);
+            pointer-events: auto;
+        }
+        .flag { font-size: 1.5em; line-height: 1; cursor: default; }
+        .switch { position: relative; display: inline-block; width: 50px; height: 24px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #2d1b4e; transition: .4s; border: 1px solid #bd93f9; }
+        .slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 4px; bottom: 3px; background-color: white; transition: .4s; box-shadow: 0 0 5px white; }
+        input:checked + .slider { background-color: #bd93f9; }
+        input:checked + .slider:before { transform: translateX(26px); background-color: #000; }
+        .slider.round { border-radius: 34px; }
+        .slider.round:before { border-radius: 50%; }
+    </style>
+</head>
+<body>
+    
+    <div class="desktop">
+        
+        <div class="desktop-icons">
+            <div class="icon" onclick="openWindow('about')"><div class="icon-img">👤</div><span>About Me</span></div>
+            <div class="icon" onclick="openWindow('projects')"><div class="icon-img">🚀</div><span>Projects</span></div>
+            <div class="icon" onclick="openWindow('skills')"><div class="icon-img">💻</div><span>Skills</span></div>
+            <div class="icon" onclick="openWindow('but-info')"><div class="icon-img">🎓</div><span>Degree Info</span></div>
+            <div class="icon" onclick="openWindow('culture')"><div class="icon-img">🏛️</div><span>Culture</span></div>
+            <div class="icon" onclick="openWindow('contact')"><div class="icon-img">📧</div><span>Contact</span></div>
+        </div>
+
+        <div class="center-screen">
+            <div class="hero-logo">NOAN<span class="highlight">OS</span></div>
+            <div class="hero-subtitle">System ready. Waiting for input...</div>
+            
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search for a skill, a project..." disabled>
+                <span class="command-hint">CTRL + K</span>
+            </div>
+            
+            <div class="language-switch">
+                <span class="flag">🇫🇷</span>
+                <label class="switch">
+                    <input type="checkbox" checked onchange="window.location.href='index.html'">
+                    <span class="slider round"></span>
+                </label>
+                <span class="flag">🇬🇧</span>
+            </div>
+        </div>
+
+        <div class="system-widget">
+            <div class="widget-header">NOAN_OS v2.0 <span class="status-dot"></span></div>
+            <div class="widget-time" id="widget-time">00:00</div>
+            <div class="widget-date" id="widget-date">Loading...</div>
+            <div class="widget-separator"></div>
+            <div class="typewriter-container">
+                <p>> Initializing portfolio...</p>
+                <p>> User: <span style="color: #bd93f9;">Recruiter</span> detected.</p>
+                <p>> Status: <span style="color: #50fa7b;">Ready to work</span>.</p>
+            </div>
+            <div class="sys-stats">
+                <div class="stat-row"><span>CPU</span><div class="stat-bar"><div class="stat-fill cpu-anim"></div></div></div>
+                <div class="stat-row"><span>RAM</span><div class="stat-bar"><div class="stat-fill ram-anim"></div></div></div>
+            </div>
+        </div>
+
+        <div id="about" class="window">
+            <div class="title-bar"><div class="title-text">user_info.exe</div><div class="window-controls"><button class="close-btn" onclick="closeWindow('about')">X</button></div></div>
+            <div class="window-content">
+                <div class="profile-header">
+                    <img src="images/avatar.jpg" alt="Noan" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 2px solid #bd93f9; display: block; margin: 0 auto 10px;">
+                    <h2 style="text-align: center;">Noan HEINRY</h2>
+                    <p class="tagline" style="text-align: center; color: #aaa;">CS Student (BUT) | Looking for internship (April 2026)</p>
+                    <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+                        <a href="documents/CV_Noan_EN.pdf" download="CV_Noan_EN.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">📄 Download my Resume</a>
+                    </div>
+                </div>
+                <p>Currently in my 2nd year of CS Degree (BUT), I am looking for an <strong>8 to 12 weeks internship</strong> in software development starting <strong>April 13th, 2026</strong>.</p>
+                <h3>Strengths & Assets</h3>
+                <ul>
+                    <li>✨ Dynamic & Curious</li>
+                    <li>🤝 Team Spirit & Autonomy</li>
+                    <li>🧠 Analytical Mind & Organization</li>
+                </ul>
+                <h3>Interests</h3>
+                <ul>
+                    <li>🛕 High-level Gymnastics (9 years)</li>
+                    <li>🏀 Volleyball and Basketball practice</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="projects" class="window" style="width: 800px;">
+            <div class="title-bar"><div class="title-text">projects_explorer.exe</div><div class="window-controls"><button class="close-btn" onclick="closeWindow('projects')">X</button></div></div>
+            <div class="window-content">
+                <div class="project-grid">
+                    <div class="project-item"><h3>❌ Tic-Tac-Toe AI</h3><p>Java vs Logic Robot.</p><a href="https://github.com/tonpseudo/morpion-java" target="_blank" class="btn">Code</a></div>
+                    <div class="project-item"><h3>🤖 EV3 Robot</h3><p>Autonomous navigation.</p><a href="https://github.com/tonpseudo/ev3-nav" target="_blank" class="btn">Code</a></div>
+                    <div class="project-item"><h3>🧬 Game of Life</h3><p>Python/Pygame simulation.</p><a href="https://github.com/tonpseudo/conway-pygame" target="_blank" class="btn">Code</a></div>
+                    <div class="project-item"><h3>🌐 PHP/SQL Site</h3><p>User management.</p><a href="https://github.com/tonpseudo/site-php" target="_blank" class="btn">Code</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skills" class="window" style="width: 700px;">
+            <div class="title-bar"><div class="title-text">system_modules.exe</div><div class="window-controls"><button class="close-btn" onclick="closeWindow('skills')">X</button></div></div>
+            <div class="window-content">
+                <div class="skill-category"><h3>💻 Programming Languages</h3><div class="skill-grid">
+                    <div class="skill-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                    <div class="skill-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                    <div class="skill-card"><i class="devicon-c-plain colored"></i><span>C</span></div>
+                    <div class="skill-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+                </div></div>
+                <div class="skill-category"><h3>🌐 Web Development</h3><div class="skill-grid">
+                    <div class="skill-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                    <div class="skill-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                    <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                    <div class="skill-card"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+                </div></div>
+                <div class="skill-category"><h3>💾 Databases & Tools</h3><div class="skill-grid">
+                    <div class="skill-card"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                    <div class="skill-card"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+                    <div class="skill-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                    <div class="skill-card"><i class="devicon-linux-plain"></i><span>Linux</span></div>
+                    <div class="skill-card"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
+                </div></div>
+            </div>
+        </div>
+
+        <div id="but-info" class="window" style="width: 90%; height: 85vh; max-width: 1200px; max-height: 85vh;">
+            <div class="title-bar"><div class="title-text">curriculum_tracker.xlsx</div><div class="window-controls"><button class="close-btn" onclick="closeWindow('but-info')">X</button></div></div>
+            <div class="window-content but-container">
+                <h2 style="text-align: center; margin-bottom: 30px;">🎓 CS Degree - Skills Assessment</h2>
+
+                <div class="but-section">
+                    <h3>Competency 1: Realize</h3>
+                    <span class="but-subtitle">Develop applications from requirements</span>
+                    <table class="but-table">
+                        <thead><tr><th>CL</th><th class="col-non-acquis">❌ Not Acquired</th><th class="col-en-cours">⚠️ In Progress</th><th class="col-acquis">✅ Acquired</th><th class="col-preuves">➡️ Proofs</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>AC1 — Specifications</td>
+                                <td><ul><li>Requirements not understood</li><li>Missing docs</li></ul></td>
+                                <td><ul><li>Partial specifications</li><li>Incomplete criteria</li></ul></td>
+                                <td class="my-level"><ul><li>Structured specifications</li><li>Needs translated</li></ul></td>
+                                <td><ul><li>User stories / UML</li><li>Traceability matrix</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC2 — UX/UI & Access.</td>
+                                <td><ul><li>Unusable UI</li><li>Unreadable</li></ul></td>
+                                <td><ul><li>Not intuitive</li><li>Partial accessibility</li></ul></td>
+                                <td class="my-level"><ul><li>Fluid Interface</li><li>ARIA Standards respected</li></ul></td>
+                                <td><ul><li>UX Checklist</li><li>User tests</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC3 — Design</td>
+                                <td><ul><li>Confusing code</li><li>Everything in one file</li></ul></td>
+                                <td class="my-level"><ul><li>Architecture needs work</li><li>Disorganized Git</li></ul></td>
+                                <td><ul><li>Clean architecture</li><li>Documented code</li></ul></td>
+                                <td><ul><li>Architecture diagrams</li><li>Modular code</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC4 — Testing</td>
+                                <td><ul><li>No tests</li><li>Bugs unseen</li></ul></td>
+                                <td class="my-level"><ul><li>Partial tests</li><li>No automation</li></ul></td>
+                                <td><ul><li>Full tests</li><li>Analyzed & Automated</li></ul></td>
+                                <td><ul><li>Test reports</li><li>CI/CD Pipeline</li></ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="but-section">
+                    <h3>Competency 2: Optimize</h3>
+                    <span class="but-subtitle">Select appropriate algorithms (Semester 3)</span>
+                    <table class="but-table">
+                        <thead><tr><th>CL</th><th class="col-non-acquis">❌ Not Acquired</th><th class="col-en-cours">⚠️ In Progress</th><th class="col-acquis">✅ Acquired</th><th class="col-preuves">➡️ Proofs</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>AC1 — Data Structures</td>
+                                <td class="my-level"><ul><li>Wrong structure</li><li>Duplicated data</li></ul></td>
+                                <td><ul><li>Choice coherent but unjustified</li></ul></td>
+                                <td><ul><li>Comparison done</li><li>Memory/Perf optimization</li></ul></td>
+                                <td><ul><li>README Analysis</li><li>Code snippets</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC2 — Algorithms</td>
+                                <td><ul><li>Wrong results</li><li>Random solution</li></ul></td>
+                                <td class="my-level"><ul><li>Working but slow</li><li>Minor optimizations</li></ul></td>
+                                <td><ul><li>Choice based on constraints</li><li>Big-O analysis</li></ul></td>
+                                <td><ul><li>Benchmarks</li><li>Algo diagram</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC3 — Algo Security</td>
+                                <td><ul><li>Unchecked data</li><li>Exploitable crashes</li></ul></td>
+                                <td class="my-level"><ul><li>Partial filtering</li><li>Partial error handling</li></ul></td>
+                                <td><ul><li>Full verification</li><li>Anti-injection/overflow</li></ul></td>
+                                <td><ul><li>Attack tests</li><li>Logs</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC4 — Eco-design</td>
+                                <td class="my-level"><ul><li>Wasted resources</li><li>No impact thought</li></ul></td>
+                                <td><ul><li>Unjustified optimizations</li><li>Impact mentioned later</li></ul></td>
+                                <td><ul><li>Optimized by design</li><li>Resource efficient</li></ul></td>
+                                <td><ul><li>Consumption profiling</li><li>Eco-report</li></ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="but-section">
+                    <h3>Competency 3: Administer</h3>
+                    <span class="but-subtitle">Deploy network services</span>
+                    <table class="but-table">
+                        <thead><tr><th>CL</th><th class="col-non-acquis">❌ Not Acquired</th><th class="col-en-cours">⚠️ In Progress</th><th class="col-acquis">✅ Acquired</th><th class="col-preuves">➡️ Proofs</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>AC1 — Communicating Apps</td>
+                                <td><ul><li>No communication</li><li>Wrong protocol</li></ul></td>
+                                <td class="my-level"><ul><li>Unstable</li><li>Protocol unjustified</li></ul></td>
+                                <td><ul><li>Reliable communication</li><li>Adapted protocol</li></ul></td>
+                                <td><ul><li>Wireshark / Postman</li><li>Exchange diagram</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC2 — Deployment</td>
+                                <td><ul><li>Not deployed</li><li>Bad network config</li></ul></td>
+                                <td class="my-level"><ul><li>Functional but unstable</li><li>Local access only</li></ul></td>
+                                <td><ul><li>Stable online service</li><li>Structured deploy (Docker)</li></ul></td>
+                                <td><ul><li>Dockerfile</li><li>Install manual</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC3 — Service Security</td>
+                                <td><ul><li>Open ports</li><li>Cleartext</li></ul></td>
+                                <td class="my-level"><ul><li>Basic Auth</li><li>Partial firewall</li></ul></td>
+                                <td><ul><li>Precise permissions</li><li>TLS/HTTPS</li></ul></td>
+                                <td><ul><li>Nmap report</li><li>SSL Certs</li></ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="but-section">
+                    <h3>Competency 4: Manage Data</h3>
+                    <span class="but-subtitle">Optimize a DB, interact and secure</span>
+                    <table class="but-table">
+                        <thead><tr><th>CL</th><th class="col-non-acquis">❌ Not Acquired</th><th class="col-en-cours">⚠️ In Progress</th><th class="col-acquis">✅ Acquired</th><th class="col-preuves">➡️ Proofs</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>AC1 — DB Design</td>
+                                <td><ul><li>Wrong relations</li><li>Redundancy</li></ul></td>
+                                <td><ul><li>Correct model</li><li>Partial normalization</li></ul></td>
+                                <td class="my-level"><ul><li>Normalized model</li><li>Integrity constraints</li></ul></td>
+                                <td><ul><li>CDM / LDM</li><li>SQL Script</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC2 — SQL</td>
+                                <td><ul><li>Wrong queries</li><li>Failed joins</li></ul></td>
+                                <td><ul><li>Correct but slow</li><li>Advanced functions unclear</li></ul></td>
+                                <td class="my-level"><ul><li>Efficient queries</li><li>Mastered aggregations</li></ul></td>
+                                <td><ul><li>Query comparison</li><li>Results</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC3 — App Connection</td>
+                                <td><ul><li>No DB link</li><li>Queries in UI</li></ul></td>
+                                <td><ul><li>Connection OK</li><li>Confusing arch</li></ul></td>
+                                <td class="my-level"><ul><li>Clean Arch (DAO/ORM)</li><li>External config (.env)</li></ul></td>
+                                <td><ul><li>DAO Code</li><li>Arch diagram</li></ul></td>
+                            </tr>
+                             <tr>
+                                <td>AC4 — DB Security</td>
+                                <td><ul><li>Cleartext pwd</li><li>SQL Injections possible</li></ul></td>
+                                <td><ul><li>Prepared statements (part)</li><li>Partial roles</li></ul></td>
+                                <td class="my-level"><ul><li>Prepared statements</li><li>Rights management</li></ul></td>
+                                <td><ul><li>Injection tests</li><li>Role config</li></ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                 <div class="but-section">
+                    <h3>Competency 5: Lead Project</h3>
+                    <span class="but-subtitle">Project management and business needs</span>
+                    <table class="but-table">
+                        <thead><tr><th>CL</th><th class="col-non-acquis">❌ Not Acquired</th><th class="col-en-cours">⚠️ In Progress</th><th class="col-acquis">✅ Acquired</th><th class="col-preuves">➡️ Proofs</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>AC1 — Needs</td>
+                                <td><ul><li>Misunderstood</li><li>Off topic</li></ul></td>
+                                <td><ul><li>Global understanding</li><li>Unverified assumptions</li></ul></td>
+                                <td class="my-level"><ul><li>Clear expectations</li><li>Client validation</li></ul></td>
+                                <td><ul><li>User stories</li><li>Meeting notes</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC2 — Planning</td>
+                                <td><ul><li>No organization</li><li>Deadlines missed</li></ul></td>
+                                <td class="my-level"><ul><li>Poor maintenance</li><li>Slow reaction</li></ul></td>
+                                <td><ul><li>Up to date planning</li><li>Transparent tracking</li></ul></td>
+                                <td><ul><li>Trello / Jira</li><li>Gantt</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC3 — Communication</td>
+                                <td><ul><li>No info sent</li><li>Misunderstandings</li></ul></td>
+                                <td class="my-level"><ul><li>Unclear info</li><li>Incomplete minutes</li></ul></td>
+                                <td><ul><li>Regular comms</li><li>Adapted to audience</li></ul></td>
+                                <td><ul><li>Meeting minutes</li><li>Slides</li></ul></td>
+                            </tr>
+                             <tr>
+                                <td>AC4 — Quality</td>
+                                <td><ul><li>No verification</li><li>No feedback</li></ul></td>
+                                <td class="my-level"><ul><li>Check w/o method</li><li>ignored improvements</li></ul></td>
+                                <td ><ul><li>Measured conformity</li><li>Concrete improvements</li></ul></td>
+                                <td><ul><li>Quality report</li><li>Metrics analysis</li></ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="but-section">
+                    <h3>Competency 6: Collaborate</h3>
+                    <span class="but-subtitle">IT Teamwork</span>
+                    <table class="but-table">
+                        <thead><tr><th>CL</th><th class="col-non-acquis">❌ Not Acquired</th><th class="col-en-cours">⚠️ In Progress</th><th class="col-acquis">✅ Acquired</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>AC1 — Positioning</td>
+                                <td><ul><li>Absent from meetings</li><li>Decisions ignored</li></ul></td>
+                                <td><ul><li>Isolated tasks</li><li>Hard to adapt</li></ul></td>
+                                <td class="my-level"><ul><li>Global understanding</li><li>Respects framework</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC2 — Team Comms</td>
+                                <td class="my-level"><ul><li>Silent problems</li><li>Ignored messages</li></ul></td>
+                                <td><ul><li>Irregular</li><li>Unclear info</li></ul></td>
+                                <td><ul><li>Useful sharing</li><li>Active contribution</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td>AC3 — Personal Org</td>
+                                <td><ul><li>Delays</li><li>Unfinished tasks</li></ul></td>
+                                <td class="my-level"><ul><li>Deadlines sometimes met</li><li>Lacks coherence</li></ul></td>
+                                <td><ul><li>Efficient planning</li><li>Deadlines respected</li></ul></td>
+                            </tr>
+                             <tr>
+                                <td>AC4 — Attitude</td>
+                                <td><ul><li>Ignored remarks</li><li>Disruptive</li></ul></td>
+                                <td class="my-level"><ul><li>Lacks initiative</li><li>Variable implication</li></ul></td>
+                                <td><ul><li>Constructive</li><li>Responsible</li></ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="culture" class="window" style="width: 60%; height: 80vh; max-height: 80vh;">
+            <div class="title-bar"><div class="title-text">greek_mythology.db</div><div class="window-controls"><button class="close-btn" onclick="closeWindow('culture')">X</button></div></div>
+            <div class="window-content myth-container">
+                <header class="myth-header">
+                    <h1>The Odyssey of Gods</h1>
+                    <p>A dive into the original chaos and the rise of Olympus.</p>
+                </header>
+                <div class="timeline">
+                    <div class="myth-card">
+                        <div class="myth-number">I</div>
+                        <h2>The Original Chaos</h2>
+                        <img src="images/chaos.jpg" alt="Chaos" class="myth-img">
+                        <p>In the beginning, there was only <strong>Chaos</strong>. From this void were born Gaia (Earth) and Ouranos (Sky). Together, they fathered the Titans.</p>
+                    </div>
+                    <div class="myth-card right">
+                        <div class="myth-number">II</div>
+                        <h2>The Revolt of Cronos</h2>
+                        <img src="images/cronos.jpg" alt="Cronos" class="myth-img">
+                        <p>Gaia, furious, asked for help. Only <strong>Cronos</strong> dared to stand up. He overthrew his father and took power, starting the Golden Age.</p>
+                    </div>
+                    <div class="myth-card">
+                        <div class="myth-number">III</div>
+                        <h2>The Titanomachy</h2>
+                        <img src="images/titanomachie.jpg" alt="Titans" class="myth-img">
+                        <p>To thwart destiny, Cronos devoured his children. But his wife Rhea saved little <strong>Zeus</strong>. A ten-year cosmic war broke out: Gods vs Titans.</p>
+                    </div>
+                    <div class="myth-card right">
+                        <div class="myth-number">IV</div>
+                        <h2>The Reign of Olympus</h2>
+                        <img src="images/olympe.jpg" alt="Olympus" class="myth-img">
+                        <p>Victorious, the three brothers shared the world:</p>
+                        <ul class="gods-list">
+                            <li> <strong>Zeus</strong>: King of Gods, master of Sky and Thunder.</li>
+                            <li> <strong>Poseidon</strong>: Master of Oceans and earthquakes.</li>
+                            <li> <strong>Hades</strong>: Guardian of the Underworld.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="window" style="width: 500px;">
+            <div class="title-bar"><div class="title-text">msg_service.exe</div><div class="window-controls"><button class="close-btn" onclick="closeWindow('contact')">X</button></div></div>
+            <div class="window-content contact-content">
+                <div class="comm-status"><span class="blink-dot"></span> SECURE CONNECTION ESTABLISHED</div>
+                <p style="text-align: center; color: #ddd; font-style: italic;">Transmission protocol ready. Select a channel:</p>
+                <div class="contact-actions">
+                    <a href="mailto:heinry.noan16@gmail.com" class="action-card">
+                        <div class="icon-box">📧</div>
+                        <div class="action-details"><span class="action-title">Send an Email</span><span class="action-desc">heinry.noan16@gmail.com</span></div>
+                    </a>
+                    <a href="https://github.com/NoanHeinry" target="_blank" class="action-card">
+                        <div class="icon-box"><i class="devicon-github-original"></i></div>
+                        <div class="action-details"><span class="action-title">GitHub Profile</span><span class="action-desc">Explore my repositories</span></div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/noan-heinry-bb180b357" class="action-card">
+                        <div class="icon-box"><i class="devicon-linkedin-plain"></i></div>
+                        <div class="action-details"><span class="action-title">LinkedIn</span><span class="action-desc">Professional Network</span></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="taskbar">
+        <button class="start-btn">🏁 Start</button>
+        <div class="taskbar-divider"></div>
+        <button class="task-btn" onclick="openWindow('about')">👤 Info</button>
+        <button class="task-btn" onclick="openWindow('projects')">🚀 Projects</button>
+        <button class="task-btn" onclick="openWindow('skills')">💻 Skills</button>
+        <button class="task-btn" onclick="openWindow('but-info')">🎓 Degree</button>
+        <button class="task-btn" onclick="openWindow('culture')">🏛️ Culture</button>
+        <button class="task-btn" onclick="openWindow('contact')">📧 Contact</button>
+        <div class="clock" id="clock">12:00</div>
+    </div>
+
+    <script>
+        function openWindow(id) {
+            const windows = document.querySelectorAll('.window');
+            windows.forEach(w => w.style.display = 'none');
+            const win = document.getElementById(id);
+            if(win) win.style.display = 'flex';
+        }
+
+        function closeWindow(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        function updateClock() {
+            const now = new Date();
+            // English format (12h clock usually, but 24h is fine for tech theme)
+            const timeString = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
+            
+            // English date format
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const dateString = now.toLocaleDateString('en-US', dateOptions);
+
+            const taskClock = document.getElementById('clock');
+            if(taskClock) taskClock.textContent = timeString;
+
+            const widgetTime = document.getElementById('widget-time');
+            const widgetDate = document.getElementById('widget-date');
+            
+            if(widgetTime) widgetTime.textContent = timeString;
+            if(widgetDate) widgetDate.textContent = dateString;
+        }
+        
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
