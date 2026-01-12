@@ -50,6 +50,14 @@
                 <input type="text" placeholder="Rechercher une compétence, un projet..." disabled>
                 <span class="command-hint">CTRL + K</span>
             </div>
+            <div class="language-switch">
+                <span class="flag">🇫🇷</span>
+                <label class="switch">
+                    <input type="checkbox" onchange="window.location.href='index_en.html'">
+                    <span class="slider round"></span>
+                </label>
+                <span class="flag">🇬🇧</span>
+            </div>
         </div>
 
         <div class="system-widget">
@@ -259,27 +267,27 @@
                                 <td>AC1 — Spécifications</td>
                                 <td><ul><li>Exigences non comprises</li><li>Manque de documents</li></ul></td>
                                 <td><ul><li>Spécifications partielles</li><li>Critères incomplets</li></ul></td>
-                                <td><ul><li>Spécifications structurées</li><li>Besoins traduits</li></ul></td>
+                                <td class="my-level"><ul><li>Spécifications structurées</li><li>Besoins traduits</li></ul></td>
                                 <td><ul><li>User stories / UML</li><li>Tableau traçabilité</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC2 — Accessibilité & Ergo</td>
                                 <td><ul><li>Interface inutilisable</li><li>Illisible</li></ul></td>
                                 <td><ul><li>Peu intuitif</li><li>Accessibilité partielle</li></ul></td>
-                                <td><ul><li>Interface fluide</li><li>Normes respectées (ARIA)</li></ul></td>
+                                <td class="my-level"><ul><li>Interface fluide</li><li>Normes respectées (ARIA)</li></ul></td>
                                 <td><ul><li>Checklist ergonomique</li><li>Tests utilisateurs</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC3 — Conception</td>
                                 <td><ul><li>Code confus</li><li>Tout dans un fichier</li></ul></td>
-                                <td><ul><li>Architecture améliorable</li><li>Git désorganisé</li></ul></td>
+                                <td class="my-level"><ul><li>Architecture améliorable</li><li>Git désorganisé</li></ul></td>
                                 <td><ul><li>Architecture propre</li><li>Code documenté</li></ul></td>
                                 <td><ul><li>Diagramme d'archi</li><li>Code modulaire</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC4 — Tests</td>
                                 <td><ul><li>Aucun test</li><li>Bugs non vus</li></ul></td>
-                                <td><ul><li>Tests partiels</li><li>Pas d'automatisation</li></ul></td>
+                                <td class="my-level"><ul><li>Tests partiels</li><li>Pas d'automatisation</li></ul></td>
                                 <td><ul><li>Tests complets</li><li>Analysés et automatisés</li></ul></td>
                                 <td><ul><li>Rapport de tests</li><li>Pipeline CI/CD</li></ul></td>
                             </tr>
@@ -303,7 +311,7 @@
                         <tbody>
                             <tr>
                                 <td>AC1 — Structures de données</td>
-                                <td><ul><li>Structure inadaptée</li><li>Choix par habitude</li></ul></td>
+                                <td class="my-level"><ul><li>Structure inadaptée</li><li>Choix par habitude</li></ul></td>
                                 <td><ul><li>Choix cohérent non justifié</li><li>Structures avancées utilisées</li></ul></td>
                                 <td><ul><li>Comparaison des structures</li><li>Optimisation mémoire/perf</li></ul></td>
                                 <td><ul><li>Analyse dans README</li><li>Extraits code</li></ul></td>
@@ -311,20 +319,20 @@
                             <tr>
                                 <td>AC2 — Algorithmes</td>
                                 <td><ul><li>Résultats faux</li><li>Algo inadapté</li></ul></td>
-                                <td><ul><li>Fonctionnel mais lent</li><li>Optimisations mineures</li></ul></td>
+                                <td class="my-level"><ul><li>Fonctionnel mais lent</li><li>Optimisations mineures</li></ul></td>
                                 <td><ul><li>Choix selon contraintes</li><li>Analyse complexité Big-O</li></ul></td>
                                 <td><ul><li>Benchmarks</li><li>Schéma algo</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC3 — Sécurité algo</td>
-                                <td><ul><li>Données non vérifiées</li><li>Plantages exploitables</li></ul></td>
-                                <td><ul><li>Filtrage partiel</li><li>Gestion erreur partielle</li></ul></td>
+                                <td ><ul><li>Données non vérifiées</li><li>Plantages exploitables</li></ul></td>
+                                <td class="my-level"><ul><li>Filtrage partiel</li><li>Gestion erreur partielle</li></ul></td>
                                 <td><ul><li>Vérification complète</li><li>Anti-injection/overflow</li></ul></td>
                                 <td><ul><li>Tests d'attaques</li><li>Logs</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC4 — Eco-conception</td>
-                                <td><ul><li>Gaspillage ressources</li><li>Pas de réflexion impact</li></ul></td>
+                                <td class="my-level"><ul><li>Gaspillage ressources</li><li>Pas de réflexion impact</li></ul></td>
                                 <td><ul><li>Optimisations sans justification</li><li>Impact évoqué après coup</li></ul></td>
                                 <td><ul><li>Optimisation dès conception</li><li>Solution économe</li></ul></td>
                                 <td><ul><li>Profiling conso</li><li>Rapport éco-conception</li></ul></td>
@@ -350,21 +358,21 @@
                             <tr>
                                 <td>AC1 — Apps communicantes</td>
                                 <td><ul><li>Pas de communication</li><li>Mauvais protocole</li></ul></td>
-                                <td><ul><li>Instable</li><li>Protocole non justifié</li></ul></td>
+                                <td class="my-level"><ul><li>Instable</li><li>Protocole non justifié</li></ul></td>
                                 <td><ul><li>Communication fiable</li><li>Protocole adapté</li></ul></td>
                                 <td><ul><li>Wireshark / Postman</li><li>Schéma échanges</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC2 — Déploiement</td>
                                 <td><ul><li>Non déployé</li><li>Mauvaise config réseau</li></ul></td>
-                                <td><ul><li>Fonctionnel mais instable</li><li>Accessible localement</li></ul></td>
+                                <td class="my-level"><ul><li>Fonctionnel mais instable</li><li>Accessible localement</li></ul></td>
                                 <td><ul><li>Service en ligne stable</li><li>Déploiement structuré (Docker)</li></ul></td>
                                 <td><ul><li>Dockerfile</li><li>Manuel install</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC3 — Sécurité services</td>
                                 <td><ul><li>Ports ouverts</li><li>En clair</li></ul></td>
-                                <td><ul><li>Auth basique</li><li>Firewall partiel</li></ul></td>
+                                <td class="my-level"><ul><li>Auth basique</li><li>Firewall partiel</li></ul></td>
                                 <td><ul><li>Permissions précises</li><li>TLS/HTTPS</li></ul></td>
                                 <td><ul><li>Rapport nmap</li><li>Certificats SSL</li></ul></td>
                             </tr>
@@ -390,28 +398,28 @@
                                 <td>AC1 — Conception BDD</td>
                                 <td><ul><li>Relations erronées</li><li>Redondances</li></ul></td>
                                 <td><ul><li>Modèle correct</li><li>Normalisation partielle</li></ul></td>
-                                <td><ul><li>Modèle normalisé</li><li>Contraintes intégrité</li></ul></td>
+                                <td class="my-level"><ul><li>Modèle normalisé</li><li>Contraintes intégrité</li></ul></td>
                                 <td><ul><li>MCD / MLD</li><li>Script SQL</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC2 — SQL</td>
                                 <td><ul><li>Requêtes fausses</li><li>Jointures ratées</li></ul></td>
                                 <td><ul><li>Correct mais lent</li><li>Fonctions avancées floues</li></ul></td>
-                                <td><ul><li>Requêtes efficaces</li><li>Agrégations maîtrisées</li></ul></td>
+                                <td class="my-level"><ul><li>Requêtes efficaces</li><li>Agrégations maîtrisées</li></ul></td>
                                 <td><ul><li>Comparaison requêtes</li><li>Résultats</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC3 — Connexion App</td>
                                 <td><ul><li>Pas de lien BDD</li><li>Requêtes dans l'interface</li></ul></td>
                                 <td><ul><li>Connexion ok</li><li>Archi floue</li></ul></td>
-                                <td><ul><li>Archi claire (DAO/ORM)</li><li>Config externe (.env)</li></ul></td>
+                                <td class="my-level"><ul><li>Archi claire (DAO/ORM)</li><li>Config externe (.env)</li></ul></td>
                                 <td><ul><li>Code DAO</li><li>Schéma archi</li></ul></td>
                             </tr>
                              <tr>
                                 <td>AC4 — Sécurité BDD</td>
                                 <td><ul><li>Mots de passe clair</li><li>Injections SQL possibles</li></ul></td>
                                 <td><ul><li>Requêtes préparées (partiel)</li><li>Rôles partiels</li></ul></td>
-                                <td><ul><li>Requêtes préparées</li><li>Gestion droits/rôles</li></ul></td>
+                                <td class="my-level"><ul><li>Requêtes préparées</li><li>Gestion droits/rôles</li></ul></td>
                                 <td><ul><li>Tests injections</li><li>Config Rôles</li></ul></td>
                             </tr>
                         </tbody>
@@ -436,28 +444,28 @@
                                 <td>AC1 — Besoins</td>
                                 <td><ul><li>Incompréhension</li><li>Hors-sujet</li></ul></td>
                                 <td><ul><li>Compréhension globale</li><li>Hypothèses non validées</li></ul></td>
-                                <td><ul><li>Attentes claires</li><li>Validation client</li></ul></td>
+                                <td class="my-level"><ul><li>Attentes claires</li><li>Validation client</li></ul></td>
                                 <td><ul><li>User stories</li><li>Notes entretien</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC2 — Planification</td>
                                 <td><ul><li>Aucune orga</li><li>Délais dépassés</li></ul></td>
-                                <td><ul><li>Orga peu maintenue</li><li>Réaction lente</li></ul></td>
+                                <td class="my-level"><ul><li>Orga peu maintenue</li><li>Réaction lente</li></ul></td>
                                 <td><ul><li>Planification à jour</li><li>Suivi transparent</li></ul></td>
                                 <td><ul><li>Trello / Jira</li><li>Gantt</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC3 — Communication</td>
                                 <td><ul><li>Pas d'info transmise</li><li>Quiproquos</li></ul></td>
-                                <td><ul><li>Info peu claire</li><li>CR incomplets</li></ul></td>
+                                <td class="my-level"><ul><li>Info peu claire</li><li>CR incomplets</li></ul></td>
                                 <td><ul><li>Com régulière</li><li>Adaptée au public</li></ul></td>
                                 <td><ul><li>CR réunion</li><li>Slides</li></ul></td>
                             </tr>
                              <tr>
                                 <td>AC4 — Qualité</td>
                                 <td><ul><li>Pas de vérif</li><li>Pas de retour</li></ul></td>
-                                <td><ul><li>Vérif sans méthode</li><li>Améliorations ignorées</li></ul></td>
-                                <td><ul><li>Mesure conformité</li><li>Améliorations concrètes</li></ul></td>
+                                <td class="my-level"><ul><li>Vérif sans méthode</li><li>Améliorations ignorées</li></ul></td>
+                                <td ><ul><li>Mesure conformité</li><li>Améliorations concrètes</li></ul></td>
                                 <td><ul><li>Rapport qualité</li><li>Analyse métriques</li></ul></td>
                             </tr>
                         </tbody>
@@ -481,24 +489,24 @@
                                 <td>AC1 — Positionnement</td>
                                 <td><ul><li>Absent réunions</li><li>Décisions ignorées</li></ul></td>
                                 <td><ul><li>Tâches isolées</li><li>Adaptation difficile</li></ul></td>
-                                <td><ul><li>Compréhension globale</li><li>Respect du cadre</li></ul></td>
+                                <td class="my-level"><ul><li>Compréhension globale</li><li>Respect du cadre</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC2 — Com équipe</td>
-                                <td><ul><li>Problèmes tus</li><li>Messages ignorés</li></ul></td>
+                                <td class="my-level"><ul><li>Problèmes tus</li><li>Messages ignorés</li></ul></td>
                                 <td><ul><li>Irrégulier</li><li>Info peu utile</li></ul></td>
                                 <td><ul><li>Partage utile</li><li>Contribution active</li></ul></td>
                             </tr>
                             <tr>
                                 <td>AC3 — Orga perso</td>
                                 <td><ul><li>Retards</li><li>Tâches non finies</li></ul></td>
-                                <td><ul><li>Délais parfois ok</li><li>Manque cohérence</li></ul></td>
+                                <td class="my-level"><ul><li>Délais parfois ok</li><li>Manque cohérence</li></ul></td>
                                 <td><ul><li>Planification efficace</li><li>Délais respectés</li></ul></td>
                             </tr>
                              <tr>
                                 <td>AC4 — Attitude</td>
                                 <td><ul><li>Remarques ignorées</li><li>Perturbation</li></ul></td>
-                                <td><ul><li>Manque initiative</li><li>Implication variable</li></ul></td>
+                                <td class="my-level"><ul><li>Manque initiative</li><li>Implication variable</li></ul></td>
                                 <td><ul><li>Constructif</li><li>Responsable</li></ul></td>
                             </tr>
                         </tbody>
@@ -646,11 +654,13 @@
 
         function updateClock() {
             const now = new Date();
-            
             const timeString = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
             
+            // Détection de la langue pour la date
+            const toggle = document.getElementById('lang-toggle');
+            const lang = (toggle && toggle.checked) ? 'en-US' : 'fr-FR';
             const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            const dateString = now.toLocaleDateString('fr-FR', dateOptions);
+            const dateString = now.toLocaleDateString(lang, dateOptions);
 
             const taskClock = document.getElementById('clock');
             if(taskClock) taskClock.textContent = timeString;
