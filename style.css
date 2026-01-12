@@ -787,3 +787,100 @@ body {
 .action-card:active {
     transform: scale(0.98);
 }
+/* --- MISE EN AVANT DE L'AUTO-ÉVALUATION --- */
+
+/* La case sélectionnée */
+.but-table td.my-level {
+    border: 2px solid #50fa7b !important; /* Bordure verte néon */
+    background: rgba(80, 250, 123, 0.05) !important; /* Fond vert très léger */
+    position: relative; /* Nécessaire pour placer le badge */
+    box-shadow: inset 0 0 20px rgba(80, 250, 123, 0.1);
+}
+
+/* Le petit badge "MON NIVEAU" */
+.but-table td.my-level::after {
+    content: "✔ MON NIVEAU";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #50fa7b;
+    color: #000;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.6em;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-bottom-left-radius: 6px;
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
+}
+/* --- BOUTON SWITCH LANGUE --- */
+.language-switch {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(0,0,0,0.3);
+    padding: 8px 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    pointer-events: auto; /* Important pour que ce soit cliquable */
+}
+
+.flag {
+    font-size: 1.5em;
+    line-height: 1;
+    cursor: default;
+}
+
+/* Le Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #2d1b4e;
+    transition: .4s;
+    border: 1px solid #bd93f9;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    box-shadow: 0 0 5px white;
+}
+
+input:checked + .slider {
+    background-color: #bd93f9;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color: #000;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
