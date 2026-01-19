@@ -22,27 +22,27 @@ body {
 /* ICÔNES DU BUREAU */
 .desktop-icons {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 2vh;          /* remplace 20px */
+    left: 1vw;         /* remplace 20px */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2vh;          /* remplace 20px */
 }
 
 .icon {
-    width: 80px;
+    width: 4.2vw;      /* remplace 80px */
     text-align: center;
     cursor: pointer;
     color: #e0e0e0;
-    text-shadow: 0 0 5px #ff79c6;
+    text-shadow: 0 0 0.25vw #ff79c6; /* remplace 5px */
 }
 
 .icon-img {
     font-size: 2em;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 5px;
+    border-radius: 0.5vw;  /* remplace 10px */
+    padding: 1vh;          /* remplace 10px */
+    margin-bottom: 0.5vh;  /* remplace 5px */
     border: 1px solid rgba(255, 121, 198, 0.3);
     transition: all 0.2s;
 }
@@ -59,13 +59,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
+    width: 32vw;           /* remplace 600px */
     max-width: 90%;
     max-height: 70vh;
     background: rgba(16, 16, 24, 0.95);
     border: 2px solid #bd93f9;
-    box-shadow: 0 0 20px rgba(189, 147, 249, 0.4);
-    border-radius: 8px;
+    box-shadow: 0 0 1vw rgba(189, 147, 249, 0.4); /* remplace 20px */
+    border-radius: 0.4vw;  /* remplace 8px */
     display: none;
     flex-direction: column;
     z-index: 10;
@@ -74,7 +74,7 @@ body {
 /* BARRE DE TITRE DES FENÊTRES */
 .title-bar {
     background: linear-gradient(90deg, #bd93f9, #ff79c6);
-    padding: 8px 15px;
+    padding: 0.8vh 0.8vw;  /* remplace 8px 15px */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,11 +88,11 @@ body {
     background: #ff5555;
     border: 2px solid #000;
     color: white;
-    width: 25px;
-    height: 25px;
+    width: 1.3vw;          /* remplace 25px */
+    height: 1.3vw;         /* remplace 25px (gardé carré avec vw) */
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 2px 2px 0px #000;
+    box-shadow: 2px 2px 0px #000; /* pixel gardé pour netteté */
 }
 
 .close-btn:active {
@@ -102,7 +102,7 @@ body {
 
 /* CONTENU DES FENÊTRES */
 .window-content {
-    padding: 20px;
+    padding: 2vh 1vw;      /* remplace 20px */
     overflow-y: auto;
     font-family: 'Segoe UI', sans-serif;
 }
@@ -110,21 +110,22 @@ body {
 .window-content h2, .window-content h3 {
     color: #bd93f9;
     border-bottom: 1px solid #444;
-    padding-bottom: 5px;
+    padding-bottom: 0.5vh; /* remplace 5px */
 }
 
 /* STYLE SPÉCIFIQUE PROJETS (GRID) */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    /* Conversion du minmax 200px en vw approx */
+    grid-template-columns: repeat(auto-fit, minmax(10.5vw, 1fr)); 
+    gap: 1.5vh; /* remplace 15px */
 }
 
 .project-item {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid #444;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 1vh 0.5vw; /* remplace 10px */
+    border-radius: 0.25vw; /* remplace 5px */
 }
 
 .project-item:hover {
@@ -136,11 +137,11 @@ body {
     display: inline-block;
     background: #bd93f9;
     color: #000;
-    padding: 5px 15px;
+    padding: 0.5vh 0.8vw; /* remplace 5px 15px */
     text-decoration: none;
     font-weight: bold;
-    margin-top: 10px;
-    border-radius: 2px;
+    margin-top: 1vh;     /* remplace 10px */
+    border-radius: 0.1vw; /* remplace 2px */
 }
 .btn:hover {
     background: #ff79c6;
@@ -160,41 +161,41 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 45px;
+    height: 4.5vh;         /* remplace 45px */
     background: rgba(20, 20, 30, 0.9);
     border-top: 2px solid #bd93f9;
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 0.5vw;      /* remplace 0 10px */
     z-index: 100;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 -2px 1vh rgba(0,0,0,0.5); /* remplace 10px */
 }
 
 .start-btn {
     background: linear-gradient(to right, #bd93f9, #ff79c6);
     border: none;
-    padding: 5px 15px;
+    padding: 0.5vh 0.8vw;  /* remplace 5px 15px */
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     color: #000;
-    margin-right: 15px;
+    margin-right: 0.8vw;   /* remplace 15px */
     cursor: pointer;
-    box-shadow: 0 0 5px #bd93f9;
+    box-shadow: 0 0 0.25vw #bd93f9; /* remplace 5px */
 }
 
 .taskbar-divider {
     width: 2px;
-    height: 25px;
+    height: 2.5vh;         /* remplace 25px */
     background: #444;
-    margin-right: 10px;
+    margin-right: 0.5vw;   /* remplace 10px */
 }
 
 .task-btn {
     background: transparent;
     border: 1px solid transparent;
     color: #fff;
-    padding: 5px 15px;
-    margin-right: 5px;
+    padding: 0.5vh 0.8vw;  /* remplace 5px 15px */
+    margin-right: 0.25vw;  /* remplace 5px */
     cursor: pointer;
     transition: 0.2s;
 }
@@ -206,7 +207,7 @@ body {
 
 .clock {
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: 1vw;     /* remplace 20px */
     font-family: 'Orbitron', monospace;
     color: #ff79c6;
     font-weight: bold;
@@ -217,20 +218,20 @@ body {
 .myth-container {
     background: linear-gradient(to bottom, rgba(16, 16, 24, 0.95), rgba(45, 27, 78, 0.4));
     color: #eee;
-    padding: 30px;
+    padding: 3vh 1.5vw;    /* remplace 30px */
 }
 
 .myth-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 4vh;    /* remplace 40px */
     border-bottom: 2px solid #bd93f9;
-    padding-bottom: 20px;
+    padding-bottom: 2vh;   /* remplace 20px */
 }
 
 .myth-header h1 {
     font-family: 'Orbitron', sans-serif;
     color: #ffd700;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    text-shadow: 0 0 0.5vw rgba(255, 215, 0, 0.5); /* remplace 10px */
     font-size: 2.5em;
     margin: 0;
 }
@@ -242,71 +243,71 @@ body {
 
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 42vw;       /* remplace 800px */
     margin: 0 auto;
-    padding-left: 20px;
+    padding-left: 1vw;     /* remplace 20px */
     border-left: 2px dashed #444;
 }
 
 .myth-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid #bd93f9;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 30px;
-    margin-left: 20px;
+    border-radius: 0.4vw;  /* remplace 8px */
+    padding: 2vh 1vw;      /* remplace 20px */
+    margin-bottom: 3vh;    /* remplace 30px */
+    margin-left: 1vw;      /* remplace 20px */
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .myth-card:hover {
-    transform: translateX(5px);
-    box-shadow: -5px 5px 0px rgba(189, 147, 249, 0.3);
+    transform: translateX(0.25vw); /* remplace 5px */
+    box-shadow: -0.25vw 0.5vh 0px rgba(189, 147, 249, 0.3); /* remplace -5px 5px */
     background: rgba(255, 255, 255, 0.07);
 }
 
 /* Style des images locales */
 .myth-img {
     width: 100%;
-    height: auto;          
-    max-height: 500px;     
-    object-fit: cover;     
-    border-radius: 4px;
-    margin: 15px 0;
+    height: auto;
+    max-height: 46vh;      /* remplace 500px */
+    object-fit: cover;
+    border-radius: 0.2vw;  /* remplace 4px */
+    margin: 1.5vh 0;       /* remplace 15px */
     border: 2px solid #ffd700;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
-    opacity: 0.9;          
+    box-shadow: 0 0 0.5vw rgba(255, 215, 0, 0.2); /* remplace 10px */
+    opacity: 0.9;
     transition: all 0.3s ease;
 }
 
 .myth-card:hover .myth-img {
     opacity: 1;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-    transform: scale(1.05); 
+    box-shadow: 0 0 1vw rgba(255, 215, 0, 0.6); /* remplace 20px */
+    transform: scale(1.05);
 }
 
 .myth-number {
     position: absolute;
-    top: -15px;
-    left: -15px;
+    top: -1.5vh;           /* remplace -15px */
+    left: -1.5vh;          /* remplace -15px (pour garder le ratio proche du cercle) */
     background: #000;
     border: 2px solid #ffd700;
     color: #ffd700;
-    width: 40px;
-    height: 40px;
+    width: 2vw;            /* remplace 40px */
+    height: 2vw;           /* remplace 40px */
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 0 0.5vw rgba(255, 215, 0, 0.3); /* remplace 10px */
 }
 
 .myth-card h2 {
     color: #ffd700;
     font-family: 'Orbitron', sans-serif;
-    margin-top: 10px;
+    margin-top: 1vh;       /* remplace 10px */
     border-bottom: 1px solid rgba(255, 215, 0, 0.3);
 }
 
@@ -324,19 +325,19 @@ body {
     list-style: none;
     padding: 0;
     background: rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    border-radius: 5px;
+    padding: 1.5vh;        /* remplace 15px */
+    border-radius: 0.25vw; /* remplace 5px */
     border-left: 3px solid #ffd700;
 }
 
 .gods-list li {
-    margin-bottom: 10px;
+    margin-bottom: 1vh;    /* remplace 10px */
     font-family: 'Courier New', monospace;
 }
 
 .myth-footer {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 5vh;       /* remplace 50px */
     color: #444;
     font-family: 'Courier New', monospace;
 }
@@ -344,24 +345,24 @@ body {
 /* --- STYLE SPÉCIFIQUE BUT INFORMATIQUE (TABLEAUX) --- */
 
 .but-container {
-    padding-bottom: 20px;
+    padding-bottom: 2vh;   /* remplace 20px */
 }
 
 .but-section {
-    margin-bottom: 40px;
+    margin-bottom: 4vh;    /* remplace 40px */
 }
 
 .but-section h3 {
     color: #ffd700;
     border-bottom: 2px solid #bd93f9;
-    padding-bottom: 10px;
+    padding-bottom: 1vh;   /* remplace 10px */
     margin-top: 0;
 }
 
 .but-subtitle {
     font-style: italic;
     color: #ff79c6;
-    margin-bottom: 15px;
+    margin-bottom: 1.5vh;  /* remplace 15px */
     display: block;
 }
 
@@ -375,13 +376,13 @@ body {
 
 .but-table th, .but-table td {
     border: 1px solid #444;
-    padding: 12px;
+    padding: 1.2vh;        /* remplace 12px */
     vertical-align: top;
     text-align: left;
 }
 
 .but-table th {
-    background: rgba(189, 147, 249, 0.2); 
+    background: rgba(189, 147, 249, 0.2);
     color: #fff;
     font-family: 'Orbitron', sans-serif;
     text-transform: uppercase;
@@ -398,12 +399,12 @@ body {
 /* Cellules de contenu */
 .but-table ul {
     margin: 0;
-    padding-left: 15px;
+    padding-left: 0.8vw;   /* remplace 15px */
     list-style-type: square;
 }
 
 .but-table li {
-    margin-bottom: 5px;
+    margin-bottom: 0.5vh;  /* remplace 5px */
     color: #ddd;
 }
 
@@ -419,26 +420,27 @@ body {
 /* --- STYLE NOUVELLE PAGE COMPÉTENCES (SKILLS) --- */
 
 .skill-category h3 {
-    color: #50fa7b; 
+    color: #50fa7b;
     border-bottom: 1px solid #444;
-    padding-bottom: 10px;
-    margin-top: 20px;
-    margin-bottom: 15px;
+    padding-bottom: 1vh;   /* remplace 10px */
+    margin-top: 2vh;       /* remplace 20px */
+    margin-bottom: 1.5vh;  /* remplace 15px */
     font-family: 'Orbitron', sans-serif;
     font-size: 1.1em;
 }
 
 .skill-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 15px;
+    /* Conversion approx 100px -> 5.2vw */
+    grid-template-columns: repeat(auto-fill, minmax(5.2vw, 1fr)); 
+    gap: 1.5vh;            /* remplace 15px */
 }
 
 .skill-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid #444;
-    border-radius: 10px;
-    padding: 15px 10px;
+    border-radius: 0.5vw;  /* remplace 10px */
+    padding: 1.5vh 0.5vw;  /* remplace 15px 10px */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -448,8 +450,8 @@ body {
 }
 
 .skill-card i {
-    font-size: 3em; 
-    margin-bottom: 10px;
+    font-size: 3em;
+    margin-bottom: 1vh;    /* remplace 10px */
     transition: transform 0.3s ease;
 }
 
@@ -462,13 +464,13 @@ body {
 /* Effet au survol (Hover) */
 .skill-card:hover {
     background: rgba(80, 250, 123, 0.1);
-    border-color: #50fa7b; 
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(80, 250, 123, 0.2);
+    border-color: #50fa7b;
+    transform: translateY(-0.5vh); /* remplace -5px */
+    box-shadow: 0 0.5vh 1.5vh rgba(80, 250, 123, 0.2); /* remplace 5px 15px */
 }
 
 .skill-card:hover i {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 /* --- WIDGET SYSTÈME (DROITE) --- */
@@ -476,24 +478,24 @@ body {
 .system-widget {
     position: absolute;
     top: 50%;
-    right: 10%; 
+    right: 10%;
     transform: translateY(-50%);
-    width: 350px;
+    width: 18.5vw;         /* remplace 350px */
     background: rgba(16, 16, 24, 0.6);
-    backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(189, 147, 249, 0.3);
-    border-radius: 15px;
-    padding: 25px;
+    border-radius: 0.8vw;  /* remplace 15px */
+    padding: 2.5vh;        /* remplace 25px */
     color: #fff;
     font-family: 'Orbitron', sans-serif;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    z-index: 1; 
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.5); /* remplace 20px */
+    z-index: 1;
 }
 
 .widget-header {
     font-size: 0.9em;
     color: #bd93f9;
-    margin-bottom: 20px;
+    margin-bottom: 2vh;    /* remplace 20px */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -501,71 +503,71 @@ body {
 }
 
 .status-dot {
-    width: 8px;
-    height: 8px;
+    width: 0.4vw;          /* remplace 8px */
+    height: 0.4vw;         /* remplace 8px */
     background-color: #50fa7b;
     border-radius: 50%;
-    box-shadow: 0 0 10px #50fa7b;
+    box-shadow: 0 0 0.5vw #50fa7b; /* remplace 10px */
     animation: blink 2s infinite;
 }
 
 .widget-time {
     font-size: 3.5em;
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 0.5vw rgba(255, 255, 255, 0.5); /* remplace 10px */
     line-height: 1;
 }
 
 .widget-date {
     font-size: 1.1em;
     color: #aaa;
-    margin-top: 5px;
+    margin-top: 0.5vh;     /* remplace 5px */
     font-family: 'Roboto', sans-serif;
 }
 
 .widget-separator {
     height: 2px;
     background: linear-gradient(90deg, transparent, #bd93f9, transparent);
-    margin: 20px 0;
+    margin: 2vh 0;         /* remplace 20px */
 }
 
 /* Texte style terminal */
 .typewriter-container p {
     font-family: 'Courier New', monospace;
     font-size: 0.9em;
-    margin: 5px 0;
+    margin: 0.5vh 0;       /* remplace 5px */
     color: #e0e0e0;
 }
 
 /* Barres de stats (CPU/RAM) */
 .sys-stats {
-    margin-top: 25px;
+    margin-top: 2.5vh;     /* remplace 25px */
 }
 
 .stat-row {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 1vh;    /* remplace 10px */
     font-size: 0.8em;
     color: #bd93f9;
 }
 
 .stat-row span {
-    width: 40px;
+    width: 2vw;            /* remplace 40px */
 }
 
 .stat-bar {
     flex-grow: 1;
-    height: 6px;
+    height: 0.6vh;         /* remplace 6px */
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
+    border-radius: 0.15vw; /* remplace 3px */
     overflow: hidden;
 }
 
 .stat-fill {
     height: 100%;
     background: linear-gradient(90deg, #bd93f9, #ff79c6);
-    box-shadow: 0 0 10px #bd93f9;
+    box-shadow: 0 0 0.5vw #bd93f9; /* remplace 10px */
 }
 
 /* Animations des barres */
@@ -586,56 +588,56 @@ body {
 
 .center-screen {
     position: absolute;
-    top: 45%; 
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 0; 
-    pointer-events: none; 
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* Gros Logo Neon */
 .hero-logo {
     font-family: 'Orbitron', sans-serif;
-    font-size: 6em; 
+    font-size: 6em;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.05); 
-    /* Contour néon */
+    color: rgba(255, 255, 255, 0.05);
+    /* Contour néon : utilisation de pixel gardée pour la finesse du contour */
     -webkit-text-stroke: 2px rgba(189, 147, 249, 0.5);
-    text-shadow: 0 0 30px rgba(189, 147, 249, 0.3);
-    margin-bottom: 10px;
-    letter-spacing: 5px;
-    user-select: none; 
+    text-shadow: 0 0 1.5vw rgba(189, 147, 249, 0.3); /* remplace 30px */
+    margin-bottom: 1vh;    /* remplace 10px */
+    letter-spacing: 0.25vw; /* remplace 5px */
+    user-select: none;
 }
 
 .hero-logo .highlight {
     color: rgba(189, 147, 249, 0.2);
     -webkit-text-stroke: 0px;
-    text-shadow: 0 0 20px #bd93f9;
+    text-shadow: 0 0 1vw #bd93f9; /* remplace 20px */
 }
 
 .hero-subtitle {
     font-family: 'Courier New', monospace;
     color: #6272a4;
     font-size: 1.1em;
-    margin-bottom: 40px;
+    margin-bottom: 4vh;    /* remplace 40px */
     opacity: 0.8;
 }
 
 /* Barre de recherche style OS */
 .search-bar {
-    pointer-events: auto; 
+    pointer-events: auto;
     background: rgba(40, 42, 54, 0.6);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-    padding: 15px 25px;
+    border-radius: 1.5vw;  /* remplace 30px */
+    padding: 1.5vh 1.3vw;  /* remplace 15px 25px */
     display: flex;
     align-items: center;
-    width: 500px;
+    width: 26vw;           /* remplace 500px */
     max-width: 90vw;
     margin: 0 auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 1vh 3vh rgba(0,0,0,0.3); /* remplace 10px 30px */
     transition: all 0.3s ease;
 }
 
@@ -643,12 +645,12 @@ body {
     background: rgba(40, 42, 54, 0.9);
     border-color: #bd93f9;
     transform: scale(1.02);
-    box-shadow: 0 10px 40px rgba(189, 147, 249, 0.15);
+    box-shadow: 0 1vh 4vh rgba(189, 147, 249, 0.15); /* remplace 10px 40px */
 }
 
 .search-icon {
     font-size: 1.2em;
-    margin-right: 15px;
+    margin-right: 0.8vw;   /* remplace 15px */
     filter: grayscale(1);
 }
 
@@ -668,8 +670,8 @@ body {
 
 .command-hint {
     background: rgba(255,255,255,0.1);
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 0.5vh 0.5vw;  /* remplace 5px 10px */
+    border-radius: 0.25vw; /* remplace 5px */
     font-size: 0.8em;
     color: #aaa;
     font-family: monospace;
@@ -687,26 +689,26 @@ body {
 .contact-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2vh;              /* remplace 20px */
 }
 
 /* Indicateur de statut (Signal) */
 .comm-status {
     background: rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    border-radius: 5px;
+    padding: 1vh;          /* remplace 10px */
+    border-radius: 0.25vw; /* remplace 5px */
     border-left: 3px solid #50fa7b;
     font-family: 'Courier New', monospace;
     color: #50fa7b;
     font-size: 0.9em;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.5vw;            /* remplace 10px */
 }
 
 .blink-dot {
-    width: 8px;
-    height: 8px;
+    width: 0.4vw;          /* remplace 8px */
+    height: 0.4vw;         /* remplace 8px */
     background-color: #50fa7b;
     border-radius: 50%;
     animation: blink 1s infinite;
@@ -716,7 +718,7 @@ body {
 .contact-actions {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 1.5vh;            /* remplace 15px */
 }
 
 /* Carte de contact (Bouton) */
@@ -725,8 +727,8 @@ body {
     align-items: center;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid #444;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 1.5vh;        /* remplace 15px */
+    border-radius: 0.4vw;  /* remplace 8px */
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
@@ -736,20 +738,20 @@ body {
 .action-card:hover {
     background: rgba(189, 147, 249, 0.1);
     border-color: #bd93f9;
-    transform: translateX(5px);
+    transform: translateX(0.25vw); /* remplace 5px */
 }
 
 /* Icône dans la carte */
 .action-card .icon-box {
-    width: 50px;
-    height: 50px;
+    width: 2.6vw;          /* remplace 50px */
+    height: 2.6vw;         /* remplace 50px */
     background: rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
-    margin-right: 15px;
+    margin-right: 0.8vw;   /* remplace 15px */
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: #fff;
 }
@@ -775,7 +777,7 @@ body {
 .action-desc {
     font-size: 0.85em;
     color: #aaa;
-    margin-top: 3px;
+    margin-top: 0.3vh;     /* remplace 3px */
 }
 
 /* Petit effet visuel lors du clic */
@@ -786,10 +788,10 @@ body {
 
 /* La case sélectionnée */
 .but-table td.my-level {
-    border: 2px solid #50fa7b !important; 
-    background: rgba(80, 250, 123, 0.05) !important; 
-    position: relative; 
-    box-shadow: inset 0 0 20px rgba(80, 250, 123, 0.1);
+    border: 2px solid #50fa7b !important;
+    background: rgba(80, 250, 123, 0.05) !important;
+    position: relative;
+    box-shadow: inset 0 0 1vw rgba(80, 250, 123, 0.1); /* remplace 20px */
 }
 
 /* Le petit badge "MON NIVEAU" */
@@ -803,23 +805,23 @@ body {
     font-family: 'Orbitron', sans-serif;
     font-size: 0.6em;
     font-weight: bold;
-    padding: 2px 6px;
-    border-bottom-left-radius: 6px;
-    box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
+    padding: 0.2vh 0.4vw;  /* remplace 2px 6px */
+    border-bottom-left-radius: 0.3vw; /* remplace 6px */
+    box-shadow: -0.1vw 0.1vw 0.25vw rgba(0,0,0,0.3); /* remplace -2px 2px 5px */
 }
 /* --- BOUTON SWITCH LANGUE --- */
 .language-switch {
-    margin-top: 25px;
+    margin-top: 2.5vh;     /* remplace 25px */
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 0.8vw;            /* remplace 15px */
     background: rgba(0,0,0,0.3);
-    padding: 8px 15px;
-    border-radius: 20px;
+    padding: 0.8vh 0.8vw;  /* remplace 8px 15px */
+    border-radius: 1vw;    /* remplace 20px */
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    pointer-events: auto; 
+    pointer-events: auto;
 }
 
 .flag {
@@ -832,11 +834,11 @@ body {
 .switch {
     position: relative;
     display: inline-block;
-    width: 50px;
-    height: 24px;
+    width: 2.6vw;          /* remplace 50px */
+    height: 1.25vw;        /* remplace 24px */
 }
 
-.switch input { 
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
@@ -854,13 +856,13 @@ body {
 .slider:before {
     position: absolute;
     content: "";
-    height: 16px;
-    width: 16px;
-    left: 4px;
-    bottom: 3px;
+    height: 0.85vw;        /* remplace 16px */
+    width: 0.85vw;         /* remplace 16px */
+    left: 0.2vw;           /* remplace 4px */
+    bottom: 0.15vw;        /* remplace 3px */
     background-color: white;
     transition: .4s;
-    box-shadow: 0 0 5px white;
+    box-shadow: 0 0 0.25vw white; /* remplace 5px */
 }
 
 input:checked + .slider {
@@ -868,12 +870,12 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(26px);
+    transform: translateX(1.35vw); /* remplace 26px */
     background-color: #000;
 }
 
 .slider.round {
-    border-radius: 34px;
+    border-radius: 1.8vw;  /* remplace 34px */
 }
 
 .slider.round:before {
