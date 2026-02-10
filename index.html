@@ -6,7 +6,44 @@
     <title>NoanOS - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    
+    <style>
+        /* CSS AJOUTÉ POUR GÉRER LES NOUVELLES ICÔNES */
+        
+        /* Taille et couleur des icônes du bureau */
+        .icon-img i {
+            font-size: 3rem; /* Taille de l'icône */
+            color: #f8f8f2;  /* Blanc cassé */
+            text-shadow: 0 0 10px rgba(189, 147, 249, 0.5); /* Lueur violette */
+            margin-bottom: 5px;
+        }
+
+        /* Couleur des icônes dans le menu démarrer/barre des tâches */
+        .task-btn i {
+            margin-right: 8px;
+            color: #bd93f9; /* Violet Dracula */
+        }
+        
+        /* Icônes dans les titres de fenêtres */
+        .window-content h3 i, 
+        .project-item h3 i {
+            margin-right: 10px;
+            color: #bd93f9;
+        }
+        
+        /* Icône de recherche */
+        .search-icon i {
+            color: #6272a4;
+        }
+
+        /* Bouton démarrer */
+        .start-btn i {
+            margin-right: 8px;
+            color: #50fa7b; /* Vert */
+        }
+    </style>
 </head>
 <body>
     
@@ -14,27 +51,27 @@
         
         <div class="desktop-icons">
             <div class="icon" onclick="openWindow('about')">
-                <div class="icon-img">👤</div>
+                <div class="icon-img"><i class="fa-solid fa-user-astronaut"></i></div>
                 <span>À propos</span>
             </div>
             <div class="icon" onclick="openWindow('projects')">
-                <div class="icon-img">🚀</div>
+                <div class="icon-img"><i class="fa-solid fa-rocket"></i></div>
                 <span>Projets</span>
             </div>
             <div class="icon" onclick="openWindow('skills')">
-                <div class="icon-img">💻</div>
+                <div class="icon-img"><i class="fa-solid fa-laptop-code"></i></div>
                 <span>Compétences</span>
             </div>
             <div class="icon" onclick="openWindow('but-info')">
-                <div class="icon-img">🎓</div>
+                <div class="icon-img"><i class="fa-solid fa-graduation-cap"></i></div>
                 <span>BUT Info</span>
             </div>
             <div class="icon" onclick="openWindow('culture')">
-                <div class="icon-img">🏛️</div>
+                <div class="icon-img"><i class="fa-solid fa-building-columns"></i></div>
                 <span>Culture G</span>
             </div>
             <div class="icon" onclick="openWindow('contact')">
-                <div class="icon-img">📧</div>
+                <div class="icon-img"><i class="fa-solid fa-envelope-open-text"></i></div>
                 <span>Contact</span>
             </div>
         </div>
@@ -46,7 +83,7 @@
             <div class="hero-subtitle">System ready. Waiting for input...</div>
             
             <div class="search-bar">
-                <span class="search-icon">🔍</span>
+                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
                 <input type="text" placeholder="Rechercher une compétence, un projet..." disabled>
                 <span class="command-hint">CTRL + K</span>
             </div>
@@ -90,7 +127,7 @@
             <div class="title-bar">
                 <div class="title-text">user_info.exe</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('about')">X</button>
+                    <button class="close-btn" onclick="closeWindow('about')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content">
@@ -102,7 +139,7 @@
                     
                     <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
                         <a href="documents/CV_Noan_HEINRY.pdf" download="CV_Noan_HEINRY.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
-                            📄 Télécharger mon CV
+                            <i class="fa-solid fa-file-pdf"></i> Télécharger mon CV
                         </a>
                     </div>
                 </div>
@@ -111,15 +148,15 @@
                 
                 <h3>Qualités & Atouts</h3>
                 <ul>
-                    <li>✨ Dynamisme & Curiosité</li>
-                    <li>🤝 Esprit d'équipe & Autonomie</li>
-                    <li>🧠 Esprit d'analyse & Organisation</li>
+                    <li><i class="fa-solid fa-bolt" style="color:#f1fa8c;"></i> Dynamisme & Curiosité</li>
+                    <li><i class="fa-solid fa-users" style="color:#ff79c6;"></i> Esprit d'équipe & Autonomie</li>
+                    <li><i class="fa-solid fa-brain" style="color:#bd93f9;"></i> Esprit d'analyse & Organisation</li>
                 </ul>
 
                 <h3>Centres d'intérêt</h3>
                 <ul>
-                    <li>🛕 Gymnastique Haut niveau (9 ans)</li>
-                    <li>🏀 Pratique régulière Volleyball et Basketball</li>
+                    <li><i class="fa-solid fa-dumbbell"></i> Gymnastique Haut niveau (9 ans)</li>
+                    <li><i class="fa-solid fa-basketball"></i> Pratique régulière Volleyball et Basketball</li>
                 </ul>
             </div>
         </div>
@@ -128,34 +165,34 @@
             <div class="title-bar">
                 <div class="title-text">projects_explorer.exe</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('projects')">X</button>
+                    <button class="close-btn" onclick="closeWindow('projects')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content">
                 <div class="project-grid">
                     <div class="project-item">
-                        <h3>❌ Morpion IA</h3>
+                        <h3><i class="fa-solid fa-gamepad"></i> Morpion</h3>
                         <p>Java vs Robot logique.</p>
                         <a href="documents/Morphalla.pdf" download="Morphalla.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
                             Présentation
                         </a>
                     </div>
                     <div class="project-item">
-                        <h3>🤖 Robot EV3</h3>
+                        <h3><i class="fa-solid fa-robot"></i> Robot EV3</h3>
                         <p>Navigation autonome.</p>
                         <a href="documents/CV_Noan_HEINRY.pdf" download="CV_Noan_HEINRY.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
                             Présentation
                         </a>
                     </div>
                     <div class="project-item">
-                        <h3>🧬 Jeu de la vie</h3>
+                        <h3><i class="fa-solid fa-dna"></i> Jeu de la vie</h3>
                         <p>Simulation Python/Pygame.</p>
                         <a href="documents/CV_Noan_HEINRY.pdf" download="CV_Noan_HEINRY.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
                             Présentation
                         </a>
                     </div>
                     <div class="project-item">
-                        <h3>🌐 EcoGest UM</h3>
+                        <h3><i class="fa-solid fa-leaf"></i> EcoGest UM</h3>
                         <p>Gestion utilisateurs.</p>
                         <a href="documents/EcoGestUM.pdf" download="EcoGestUM.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
                             Présentation
@@ -169,13 +206,13 @@
             <div class="title-bar">
                 <div class="title-text">system_modules.exe</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('skills')">X</button>
+                    <button class="close-btn" onclick="closeWindow('skills')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content">
                 
                 <div class="skill-category">
-                    <h3>💻 Langages de programmation</h3>
+                    <h3><i class="fa-solid fa-code"></i> Langages de programmation</h3>
                     <div class="skill-grid">
                         <div class="skill-card">
                             <i class="devicon-python-plain colored"></i>
@@ -197,7 +234,7 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3>🌐 Développement Web</h3>
+                    <h3><i class="fa-solid fa-globe"></i> Développement Web</h3>
                     <div class="skill-grid">
                         <div class="skill-card">
                             <i class="devicon-html5-plain colored"></i>
@@ -219,7 +256,7 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3>💾 Bases de données & Outils</h3>
+                    <h3><i class="fa-solid fa-database"></i> Bases de données & Outils</h3>
                     <div class="skill-grid">
                         <div class="skill-card">
                             <i class="devicon-mysql-plain colored"></i>
@@ -527,7 +564,7 @@
             <div class="title-bar">
                 <div class="title-text">greek_mythology.db</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('culture')">X</button>
+                    <button class="close-btn" onclick="closeWindow('culture')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             
@@ -558,7 +595,6 @@
                             il serait à son tour détrôné par l'un de ses fils.
                         </p>
                     </div>
-
                     <div class="myth-card">
                         <div class="myth-number">III</div>
                         <h2>La Titanomachie</h2>
@@ -587,7 +623,7 @@
             <div class="title-bar">
                 <div class="title-text">msg_service.exe</div>
                 <div class="window-controls">
-                    <button class="close-btn" onclick="closeWindow('contact')">X</button>
+                    <button class="close-btn" onclick="closeWindow('contact')"><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <div class="window-content contact-content">
@@ -602,7 +638,7 @@
 
                 <div class="contact-actions">
                     <a href="mailto:heinry.noan16@gmail.com" class="action-card">
-                        <div class="icon-box">📧</div>
+                        <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
                         <div class="action-details">
                             <span class="action-title">Envoyer un Email</span>
                             <span class="action-desc">heinry.noan16@gmail.com</span>
@@ -636,14 +672,14 @@
     </div>
 
     <div class="taskbar">
-        <button class="start-btn">🏁 Start</button>
+        <button class="start-btn"><i class="fa-brands fa-windows"></i> Start</button>
         <div class="taskbar-divider"></div>
-        <button class="task-btn" onclick="openWindow('about')">👤 Info</button>
-        <button class="task-btn" onclick="openWindow('projects')">🚀 Projets</button>
-        <button class="task-btn" onclick="openWindow('skills')">💻 Compétences</button>
-        <button class="task-btn" onclick="openWindow('but-info')">🎓 BUT Info</button>
-        <button class="task-btn" onclick="openWindow('culture')">🏛️ Culture</button>
-        <button class="task-btn" onclick="openWindow('contact')">📧 Contact</button>
+        <button class="task-btn" onclick="openWindow('about')"><i class="fa-solid fa-user-astronaut"></i> Info</button>
+        <button class="task-btn" onclick="openWindow('projects')"><i class="fa-solid fa-rocket"></i> Projets</button>
+        <button class="task-btn" onclick="openWindow('skills')"><i class="fa-solid fa-laptop-code"></i> Skills</button>
+        <button class="task-btn" onclick="openWindow('but-info')"><i class="fa-solid fa-graduation-cap"></i> BUT</button>
+        <button class="task-btn" onclick="openWindow('culture')"><i class="fa-solid fa-building-columns"></i> Culture</button>
+        <button class="task-btn" onclick="openWindow('contact')"><i class="fa-solid fa-envelope"></i> Contact</button>
 
         <div class="clock" id="clock">12:00</div>
     </div>
