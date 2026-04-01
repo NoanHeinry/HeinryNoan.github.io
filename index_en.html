@@ -6,6 +6,7 @@
     <title>NoanOS - Portfolio (EN)</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     
     <style>
@@ -25,6 +26,30 @@
         input:checked + .slider:before { transform: translateX(26px); background-color: #000; }
         .slider.round { border-radius: 34px; }
         .slider.round:before { border-radius: 50%; }
+
+        /* --- STYLES FOR ICONS (SAME AS FR VERSION) --- */
+        .icon-img i {
+            font-size: 3rem;
+            color: #f8f8f2;
+            text-shadow: 0 0 10px rgba(189, 147, 249, 0.5);
+            margin-bottom: 5px;
+        }
+        .task-btn i {
+            margin-right: 8px;
+            color: #bd93f9;
+        }
+        .window-content h3 i, 
+        .project-item h3 i {
+            margin-right: 10px;
+            color: #bd93f9;
+        }
+        .search-icon i {
+            color: #6272a4;
+        }
+        .start-btn i {
+            margin-right: 8px;
+            color: #50fa7b;
+        }
     </style>
 </head>
 <body>
@@ -32,12 +57,30 @@
     <div class="desktop">
         
         <div class="desktop-icons">
-            <div class="icon" onclick="openWindow('about')"><div class="icon-img">👤</div><span>About Me</span></div>
-            <div class="icon" onclick="openWindow('projects')"><div class="icon-img">🚀</div><span>Projects</span></div>
-            <div class="icon" onclick="openWindow('skills')"><div class="icon-img">💻</div><span>Skills</span></div>
-            <div class="icon" onclick="openWindow('but-info')"><div class="icon-img">🎓</div><span>Degree Info</span></div>
-            <div class="icon" onclick="openWindow('culture')"><div class="icon-img">🏛️</div><span>Culture</span></div>
-            <div class="icon" onclick="openWindow('contact')"><div class="icon-img">📧</div><span>Contact</span></div>
+            <div class="icon" onclick="openWindow('about')">
+                <div class="icon-img"><i class="fa-solid fa-user-astronaut"></i></div>
+                <span>About Me</span>
+            </div>
+            <div class="icon" onclick="openWindow('projects')">
+                <div class="icon-img"><i class="fa-solid fa-rocket"></i></div>
+                <span>Projects</span>
+            </div>
+            <div class="icon" onclick="openWindow('skills')">
+                <div class="icon-img"><i class="fa-solid fa-laptop-code"></i></div>
+                <span>Skills</span>
+            </div>
+            <div class="icon" onclick="openWindow('but-info')">
+                <div class="icon-img"><i class="fa-solid fa-graduation-cap"></i></div>
+                <span>Degree Info</span>
+            </div>
+            <div class="icon" onclick="openWindow('culture')">
+                <div class="icon-img"><i class="fa-solid fa-building-columns"></i></div>
+                <span>Culture</span>
+            </div>
+            <div class="icon" onclick="openWindow('contact')">
+                <div class="icon-img"><i class="fa-solid fa-envelope-open-text"></i></div>
+                <span>Contact</span>
+            </div>
         </div>
 
         <div class="center-screen">
@@ -45,7 +88,7 @@
             <div class="hero-subtitle">System ready. Waiting for input...</div>
             
             <div class="search-bar">
-                <span class="search-icon">🔍</span>
+                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
                 <input type="text" placeholder="Search for a skill, a project..." disabled>
                 <span class="command-hint">CTRL + K</span>
             </div>
@@ -77,78 +120,135 @@
         </div>
 
         <div id="about" class="window">
-            <div class="title-bar"><div class="title-text">user_info.exe</div><div class="window-controls"><button class="close-btn" onclick="closeWindow('about')">X</button></div></div>
+            <div class="title-bar">
+                <div class="title-text">user_info.exe</div>
+                <div class="window-controls">
+                    <button class="close-btn" onclick="closeWindow('about')"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
             <div class="window-content">
                 <div class="profile-header">
                     <img src="images/avatar.jpg" alt="Noan" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 2px solid #bd93f9; display: block; margin: 0 auto 10px;">
                     <h2 style="text-align: center;">Noan HEINRY</h2>
                     <p class="tagline" style="text-align: center; color: #aaa;">CS Student (BUT) | Looking for internship (April 2026)</p>
                     <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
-                        <a href="documents/CV_Noan_EN.pdf" download="CV_Noan_EN.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">📄 Download my Resume</a>
+                        <a href="documents/CV_Noan_EN.pdf" download="CV_Noan_EN.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">
+                            <i class="fa-solid fa-file-pdf"></i> Download my Resume
+                        </a>
                     </div>
                 </div>
                 <p>Currently in my 2nd year of CS Degree (BUT), I am looking for an <strong>8 to 12 weeks internship</strong> in software development starting <strong>April 13th, 2026</strong>.</p>
+                
                 <h3>Strengths & Assets</h3>
                 <ul>
-                    <li>✨ Dynamic & Curious</li>
-                    <li>🤝 Team Spirit & Autonomy</li>
-                    <li>🧠 Analytical Mind & Organization</li>
+                    <li><i class="fa-solid fa-bolt" style="color:#f1fa8c;"></i> Dynamic & Curious</li>
+                    <li><i class="fa-solid fa-users" style="color:#ff79c6;"></i> Team Spirit & Autonomy</li>
+                    <li><i class="fa-solid fa-brain" style="color:#bd93f9;"></i> Analytical Mind & Organization</li>
                 </ul>
+                
                 <h3>Interests</h3>
                 <ul>
-                    <li>🛕 High-level Gymnastics (9 years)</li>
-                    <li>🏀 Volleyball and Basketball practice</li>
+                    <li><i class="fa-solid fa-dumbbell"></i> High-level Gymnastics (9 years)</li>
+                    <li><i class="fa-solid fa-basketball"></i> Volleyball and Basketball practice</li>
                 </ul>
             </div>
         </div>
 
         <div id="projects" class="window" style="width: 800px;">
-            <div class="title-bar"><div class="title-text">projects_explorer.exe</div><div class="window-controls"><button class="close-btn" onclick="closeWindow('projects')">X</button></div></div>
+            <div class="title-bar">
+                <div class="title-text">projects_explorer.exe</div>
+                <div class="window-controls">
+                    <button class="close-btn" onclick="closeWindow('projects')"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
             <div class="window-content">
                 <div class="project-grid">
-                    <div class="project-item"><h3>❌ Tic-Tac-Toe AI</h3><p>Java vs Logic Robot.</p><a href="documents/Morphalla.pdf" download="Morphalla.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">Présentation</a></div>
-                    <div class="project-item"><h3>🤖 EV3 Robot</h3><p>Autonomous navigation.</p><a href="documents/EcoGestUM.pdf" download="EcoGestUM.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">Présentation</a></div>
-                    <div class="project-item"><h3>🧬 Game of Life</h3><p>Python/Pygame simulation.</p><a href="documents/EcoGestUM.pdf" download="EcoGestUM.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">Présentation</a></div>
-                    <div class="project-item"><h3>🌐 EcoGest UM</h3><p>User management.</p><a href="documents/EcoGestUM.pdf" download="EcoGestUM.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">Présentation</a></div>
+                    <div class="project-item">
+                        <h3><i class="fa-solid fa-gamepad"></i> Tic-Tac-Toe AI</h3>
+                        <p>Java vs Logic Robot.</p>
+                        <a href="documents/Morphalla.pdf" download="Morphalla.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">Presentation</a>
+                    </div>
+                    <div class="project-item">
+                        <h3><i class="fa-solid fa-robot"></i> EV3 Robot</h3>
+                        <p>Autonomous navigation.</p>
+                        <a href="documents/EcoGestUM.pdf" download="EcoGestUM.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">Presentation</a>
+                    </div>
+                    <div class="project-item">
+                        <h3><i class="fa-solid fa-dna"></i> Game of Life</h3>
+                        <p>Python/Pygame simulation.</p>
+                        <a href="documents/EcoGestUM.pdf" download="EcoGestUM.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">Presentation</a>
+                    </div>
+                    <div class="project-item">
+                        <h3><i class="fa-solid fa-leaf"></i> EcoGest UM</h3>
+                        <p>User management.</p>
+                        <a href="documents/EcoGestUM.pdf" download="EcoGestUM.pdf" class="btn" style="padding: 10px 20px; font-size: 1.1em;">Presentationy</a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="skills" class="window" style="width: 700px;">
-            <div class="title-bar"><div class="title-text">system_modules.exe</div><div class="window-controls"><button class="close-btn" onclick="closeWindow('skills')">X</button></div></div>
+            <div class="title-bar">
+                <div class="title-text">system_modules.exe</div>
+                <div class="window-controls">
+                    <button class="close-btn" onclick="closeWindow('skills')"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
             <div class="window-content">
-                <div class="skill-category"><h3>💻 Programming Languages</h3><div class="skill-grid">
-                    <div class="skill-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
-                    <div class="skill-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
-                    <div class="skill-card"><i class="devicon-c-plain colored"></i><span>C</span></div>
-                    <div class="skill-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
-                </div></div>
-                <div class="skill-category"><h3>🌐 Web Development</h3><div class="skill-grid">
-                    <div class="skill-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
-                    <div class="skill-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
-                    <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
-                    <div class="skill-card"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
-                </div></div>
-                <div class="skill-category"><h3>💾 Databases & Tools</h3><div class="skill-grid">
-                    <div class="skill-card"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
-                    <div class="skill-card"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
-                    <div class="skill-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-                    <div class="skill-card"><i class="devicon-linux-plain"></i><span>Linux</span></div>
-                    <div class="skill-card"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
-                </div></div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-code"></i> Programming Languages</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                        <div class="skill-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                        <div class="skill-card"><i class="devicon-c-plain colored"></i><span>C</span></div>
+                        <div class="skill-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-globe"></i> Web Development</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                        <div class="skill-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                        <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                        <div class="skill-card"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-database"></i> Databases & Tools</h3>
+                    <div class="skill-grid">
+                        <div class="skill-card"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                        <div class="skill-card"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+                        <div class="skill-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                        <div class="skill-card"><i class="devicon-linux-plain"></i><span>Linux</span></div>
+                        <div class="skill-card"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="but-info" class="window" style="width: 90%; height: 85vh; max-width: 1200px; max-height: 85vh;">
-            <div class="title-bar"><div class="title-text">curriculum_tracker.xlsx</div><div class="window-controls"><button class="close-btn" onclick="closeWindow('but-info')">X</button></div></div>
+            <div class="title-bar">
+                <div class="title-text">curriculum_tracker.xlsx</div>
+                <div class="window-controls">
+                    <button class="close-btn" onclick="closeWindow('but-info')"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
             <div class="window-content but-container">
-                <h2 style="text-align: center; margin-bottom: 30px;">🎓 CS Degree - Skills Assessment</h2>
+                <h2 style="text-align: center; margin-bottom: 30px;"><i class="fa-solid fa-graduation-cap"></i> CS Degree - Skills Assessment</h2>
 
                 <div class="but-section">
                     <h3>Competency 1: Realize</h3>
                     <span class="but-subtitle">Develop applications from requirements</span>
                     <table class="but-table">
-                        <thead><tr><th>CL</th><th class="col-non-acquis">❌ Not Acquired</th><th class="col-en-cours">⚠️ In Progress</th><th class="col-acquis">✅ Acquired</th><th class="col-preuves">➡️ Proofs</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th>CL</th>
+                                <th class="col-non-acquis"><i class="fa-solid fa-xmark"></i> Not Acquired</th>
+                                <th class="col-en-cours"><i class="fa-solid fa-triangle-exclamation"></i> In Progress</th>
+                                <th class="col-acquis"><i class="fa-solid fa-check"></i> Acquired</th>
+                                <th class="col-preuves"><i class="fa-solid fa-folder-open"></i> Proofs</th>
+                            </tr>
+                        </thead>
                         <tbody>
                             <tr>
                                 <td>AC1 — Specifications</td>
@@ -186,7 +286,15 @@
                     <h3>Competency 2: Optimize</h3>
                     <span class="but-subtitle">Select appropriate algorithms (Semester 3)</span>
                     <table class="but-table">
-                        <thead><tr><th>CL</th><th class="col-non-acquis">❌ Not Acquired</th><th class="col-en-cours">⚠️ In Progress</th><th class="col-acquis">✅ Acquired</th><th class="col-preuves">➡️ Proofs</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th>CL</th>
+                                <th class="col-non-acquis"><i class="fa-solid fa-xmark"></i> Not Acquired</th>
+                                <th class="col-en-cours"><i class="fa-solid fa-triangle-exclamation"></i> In Progress</th>
+                                <th class="col-acquis"><i class="fa-solid fa-check"></i> Acquired</th>
+                                <th class="col-preuves"><i class="fa-solid fa-folder-open"></i> Proofs</th>
+                            </tr>
+                        </thead>
                         <tbody>
                             <tr>
                                 <td>AC1 — Data Structures</td>
@@ -224,7 +332,15 @@
                     <h3>Competency 3: Administer</h3>
                     <span class="but-subtitle">Deploy network services</span>
                     <table class="but-table">
-                        <thead><tr><th>CL</th><th class="col-non-acquis">❌ Not Acquired</th><th class="col-en-cours">⚠️ In Progress</th><th class="col-acquis">✅ Acquired</th><th class="col-preuves">➡️ Proofs</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th>CL</th>
+                                <th class="col-non-acquis"><i class="fa-solid fa-xmark"></i> Not Acquired</th>
+                                <th class="col-en-cours"><i class="fa-solid fa-triangle-exclamation"></i> In Progress</th>
+                                <th class="col-acquis"><i class="fa-solid fa-check"></i> Acquired</th>
+                                <th class="col-preuves"><i class="fa-solid fa-folder-open"></i> Proofs</th>
+                            </tr>
+                        </thead>
                         <tbody>
                             <tr>
                                 <td>AC1 — Communicating Apps</td>
@@ -255,7 +371,15 @@
                     <h3>Competency 4: Manage Data</h3>
                     <span class="but-subtitle">Optimize a DB, interact and secure</span>
                     <table class="but-table">
-                        <thead><tr><th>CL</th><th class="col-non-acquis">❌ Not Acquired</th><th class="col-en-cours">⚠️ In Progress</th><th class="col-acquis">✅ Acquired</th><th class="col-preuves">➡️ Proofs</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th>CL</th>
+                                <th class="col-non-acquis"><i class="fa-solid fa-xmark"></i> Not Acquired</th>
+                                <th class="col-en-cours"><i class="fa-solid fa-triangle-exclamation"></i> In Progress</th>
+                                <th class="col-acquis"><i class="fa-solid fa-check"></i> Acquired</th>
+                                <th class="col-preuves"><i class="fa-solid fa-folder-open"></i> Proofs</th>
+                            </tr>
+                        </thead>
                         <tbody>
                             <tr>
                                 <td>AC1 — DB Design</td>
@@ -278,7 +402,7 @@
                                 <td class="my-level"><ul><li>Clean Arch (DAO/ORM)</li><li>External config (.env)</li></ul></td>
                                 <td><ul><li>DAO Code</li><li>Arch diagram</li></ul></td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td>AC4 — DB Security</td>
                                 <td><ul><li>Cleartext pwd</li><li>SQL Injections possible</li></ul></td>
                                 <td><ul><li>Prepared statements (part)</li><li>Partial roles</li></ul></td>
@@ -289,11 +413,19 @@
                     </table>
                 </div>
 
-                 <div class="but-section">
+                <div class="but-section">
                     <h3>Competency 5: Lead Project</h3>
                     <span class="but-subtitle">Project management and business needs</span>
                     <table class="but-table">
-                        <thead><tr><th>CL</th><th class="col-non-acquis">❌ Not Acquired</th><th class="col-en-cours">⚠️ In Progress</th><th class="col-acquis">✅ Acquired</th><th class="col-preuves">➡️ Proofs</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th>CL</th>
+                                <th class="col-non-acquis"><i class="fa-solid fa-xmark"></i> Not Acquired</th>
+                                <th class="col-en-cours"><i class="fa-solid fa-triangle-exclamation"></i> In Progress</th>
+                                <th class="col-acquis"><i class="fa-solid fa-check"></i> Acquired</th>
+                                <th class="col-preuves"><i class="fa-solid fa-folder-open"></i> Proofs</th>
+                            </tr>
+                        </thead>
                         <tbody>
                             <tr>
                                 <td>AC1 — Needs</td>
@@ -316,11 +448,11 @@
                                 <td><ul><li>Regular comms</li><li>Adapted to audience</li></ul></td>
                                 <td><ul><li>Meeting minutes</li><li>Slides</li></ul></td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td>AC4 — Quality</td>
                                 <td><ul><li>No verification</li><li>No feedback</li></ul></td>
                                 <td class="my-level"><ul><li>Check w/o method</li><li>ignored improvements</li></ul></td>
-                                <td ><ul><li>Measured conformity</li><li>Concrete improvements</li></ul></td>
+                                <td><ul><li>Measured conformity</li><li>Concrete improvements</li></ul></td>
                                 <td><ul><li>Quality report</li><li>Metrics analysis</li></ul></td>
                             </tr>
                         </tbody>
@@ -331,7 +463,14 @@
                     <h3>Competency 6: Collaborate</h3>
                     <span class="but-subtitle">IT Teamwork</span>
                     <table class="but-table">
-                        <thead><tr><th>CL</th><th class="col-non-acquis">❌ Not Acquired</th><th class="col-en-cours">⚠️ In Progress</th><th class="col-acquis">✅ Acquired</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th>CL</th>
+                                <th class="col-non-acquis"><i class="fa-solid fa-xmark"></i> Not Acquired</th>
+                                <th class="col-en-cours"><i class="fa-solid fa-triangle-exclamation"></i> In Progress</th>
+                                <th class="col-acquis"><i class="fa-solid fa-check"></i> Acquired</th>
+                            </tr>
+                        </thead>
                         <tbody>
                             <tr>
                                 <td>AC1 — Positioning</td>
@@ -351,7 +490,7 @@
                                 <td class="my-level"><ul><li>Deadlines sometimes met</li><li>Lacks coherence</li></ul></td>
                                 <td><ul><li>Efficient planning</li><li>Deadlines respected</li></ul></td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td>AC4 — Attitude</td>
                                 <td><ul><li>Ignored remarks</li><li>Disruptive</li></ul></td>
                                 <td class="my-level"><ul><li>Lacks initiative</li><li>Variable implication</li></ul></td>
@@ -364,7 +503,12 @@
         </div>
 
         <div id="culture" class="window" style="width: 60%; height: 80vh; max-height: 80vh;">
-            <div class="title-bar"><div class="title-text">greek_mythology.db</div><div class="window-controls"><button class="close-btn" onclick="closeWindow('culture')">X</button></div></div>
+            <div class="title-bar">
+                <div class="title-text">greek_mythology.db</div>
+                <div class="window-controls">
+                    <button class="close-btn" onclick="closeWindow('culture')"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
             <div class="window-content myth-container">
                 <header class="myth-header">
                     <h1>The Odyssey of Gods</h1>
@@ -405,13 +549,18 @@
         </div>
 
         <div id="contact" class="window" style="width: 500px;">
-            <div class="title-bar"><div class="title-text">msg_service.exe</div><div class="window-controls"><button class="close-btn" onclick="closeWindow('contact')">X</button></div></div>
+            <div class="title-bar">
+                <div class="title-text">msg_service.exe</div>
+                <div class="window-controls">
+                    <button class="close-btn" onclick="closeWindow('contact')"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
             <div class="window-content contact-content">
                 <div class="comm-status"><span class="blink-dot"></span> SECURE CONNECTION ESTABLISHED</div>
                 <p style="text-align: center; color: #ddd; font-style: italic;">Transmission protocol ready. Select a channel:</p>
                 <div class="contact-actions">
                     <a href="mailto:heinry.noan16@gmail.com" class="action-card">
-                        <div class="icon-box">📧</div>
+                        <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
                         <div class="action-details"><span class="action-title">Send an Email</span><span class="action-desc">heinry.noan16@gmail.com</span></div>
                     </a>
                     <a href="https://github.com/NoanHeinry" target="_blank" class="action-card">
@@ -429,14 +578,14 @@
     </div>
 
     <div class="taskbar">
-        <button class="start-btn">🏁 Start</button>
+        <button class="start-btn"><i class="fa-brands fa-windows"></i> Start</button>
         <div class="taskbar-divider"></div>
-        <button class="task-btn" onclick="openWindow('about')">👤 Info</button>
-        <button class="task-btn" onclick="openWindow('projects')">🚀 Projects</button>
-        <button class="task-btn" onclick="openWindow('skills')">💻 Skills</button>
-        <button class="task-btn" onclick="openWindow('but-info')">🎓 Degree</button>
-        <button class="task-btn" onclick="openWindow('culture')">🏛️ Culture</button>
-        <button class="task-btn" onclick="openWindow('contact')">📧 Contact</button>
+        <button class="task-btn" onclick="openWindow('about')"><i class="fa-solid fa-user-astronaut"></i> Info</button>
+        <button class="task-btn" onclick="openWindow('projects')"><i class="fa-solid fa-rocket"></i> Projects</button>
+        <button class="task-btn" onclick="openWindow('skills')"><i class="fa-solid fa-laptop-code"></i> Skills</button>
+        <button class="task-btn" onclick="openWindow('but-info')"><i class="fa-solid fa-graduation-cap"></i> Degree</button>
+        <button class="task-btn" onclick="openWindow('culture')"><i class="fa-solid fa-building-columns"></i> Culture</button>
+        <button class="task-btn" onclick="openWindow('contact')"><i class="fa-solid fa-envelope"></i> Contact</button>
         <div class="clock" id="clock">12:00</div>
     </div>
 
@@ -454,7 +603,7 @@
 
         function updateClock() {
             const now = new Date();
-            // English format (12h clock usually, but 24h is fine for tech theme)
+            // English format
             const timeString = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
             
             // English date format
